@@ -181,6 +181,15 @@ def _patch_graphiti_dedupe_schema() -> bool:
 
     return True
 
+def _read_file(path: Optional[str]) -> Optional[str]:
+    if not path:
+        return None
+    try:
+        with open(path, "r", encoding="utf-8", errors="ignore") as handle:
+            return handle.read()
+    except Exception:
+        return None
+
 def load_graphiti_dependencies() -> bool:
     global Graphiti, EpisodeType, LLMConfig, OpenAIGenericClient
     global OpenAIEmbedder, OpenAIEmbedderConfig, GeminiEmbedder, GeminiEmbedderConfig
@@ -632,17 +641,38 @@ async def execute_operation(client, args: argparse.Namespace, config: Dict[str, 
 
 async def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", required=True)
+    parser.add_argument("--config")
+    parser.add_argument("--config-file")
     parser.add_argument("--operation", required=True)
     parser.add_argument("--name", help="Episode Name")
     parser.add_argument("--content", help="Episode Content")
+    parser.add_argument("--content-file")
     parser.add_argument("--query", help="Search Query")
+    parser.add_argument("--query-file")
     parser.add_argument("--limit", type=int, default=10)
     parser.add_argument("--mode", help="Memory Mode", default="Chatbot")
     parser.add_argument("--group_id", help="Database Name", default="neo4j")
     parser.add_argument("--episode_id", help="Episode ID")
     args = parser.parse_args()
-    config = json.loads(args.config)
+
+    config_payload = None
+    if args.config_file:
+        config_payload = _read_file(args.config_file)
+    if config_payload is None:
+        config_payload = args.config
+    if not config_payload:
+        print(json.dumps({"error": "Missing config payload."}))
+        return
+    config = json.loads(config_payload)
+
+    if args.content_file:
+        file_content = _read_file(args.content_file)
+        if file_content is not None:
+            args.content = file_content
+    if args.query_file:
+        file_query = _read_file(args.query_file)
+        if file_query is not None:
+            args.query = file_query
 
     if not load_graphiti_dependencies():
         return
@@ -665,9 +695,12 @@ async def main():
     if llm_params["api_key"]: os.environ["OPENAI_API_KEY"] = llm_params["api_key"]
     
     try:
+        max_tokens = int(llm_conf.get("max_tokens", 8192))
+        if max_tokens > 16384:
+            max_tokens = 16384
         llm_config = LLMConfig(
             model=llm_params["model"], api_key=llm_params["api_key"], base_url=llm_params["base_url"],
-            temperature=0.0, max_tokens=int(llm_conf.get("max_tokens", 8192))
+            temperature=0.0, max_tokens=max_tokens
         )
         custom_llm = OpenAIGenericClient(llm_config)
 

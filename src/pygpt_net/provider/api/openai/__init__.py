@@ -125,6 +125,8 @@ class ApiOpenAI:
             model_id = model.id
             if max_tokens > model.tokens:  # check max output tokens
                 max_tokens = model.tokens
+            if max_tokens > 16384:
+                max_tokens = 16384
 
         response = None
         used_tokens = 0

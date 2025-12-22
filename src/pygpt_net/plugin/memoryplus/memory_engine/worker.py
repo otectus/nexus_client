@@ -58,12 +58,15 @@ class MemoryWorker(Process):
         if llm_params.get("api_key"):
             os.environ["OPENAI_API_KEY"] = llm_params["api_key"]
 
+        max_tokens = int(llm_conf.get("max_tokens", 8192))
+        if max_tokens > 16384:
+            max_tokens = 16384
         llm_config = runner_module.LLMConfig(
             model=llm_params["model"],
             api_key=llm_params["api_key"],
             base_url=llm_params["base_url"],
             temperature=0.0,
-            max_tokens=int(llm_conf.get("max_tokens", 8192)),
+            max_tokens=max_tokens,
         )
         custom_llm = runner_module.OpenAIGenericClient(llm_config)
 

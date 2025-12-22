@@ -35,6 +35,7 @@ class MemoryEngineClient:
         self.worker: Optional[MemoryWorker] = None
         self._pending: Dict[str, Dict[str, Any]] = {}
         self._lock = threading.Lock()
+        self._worker_lock = threading.Lock()
         self.default_timeout = 30.0
         self.last_error: Optional[str] = None
         self.last_error_type: Optional[str] = None
@@ -65,17 +66,18 @@ class MemoryEngineClient:
             pass
 
     def _start_worker(self) -> bool:
-        if self.worker and self.worker.is_alive():
-            return True
+        with self._worker_lock:
+            if self.worker and self.worker.is_alive():
+                return True
 
-        self._init_error = None
-        self.last_error = None
-        self.last_error_type = None
-        config = self.config_builder()
-        group_id = self.group_id_provider()
-        self.worker = MemoryWorker(config=config, group_id=group_id, request_queue=self.request_queue, response_queue=self.response_queue)
-        self.worker.start()
-        return self.worker.is_alive()
+            self._init_error = None
+            self.last_error = None
+            self.last_error_type = None
+            config = self.config_builder()
+            group_id = self.group_id_provider()
+            self.worker = MemoryWorker(config=config, group_id=group_id, request_queue=self.request_queue, response_queue=self.response_queue)
+            self.worker.start()
+            return self.worker.is_alive()
 
     def restart(self) -> bool:
         self.shutdown()
@@ -85,25 +87,28 @@ class MemoryEngineClient:
         return self._start_worker()
 
     def shutdown(self):
-        if not self.worker:
+        with self._worker_lock:
+            worker = self.worker
+            self.worker = None
+        if not worker:
             return
         try:
             req = EngineRequest(operation=REQUEST_SHUTDOWN)
             self.request_queue.put(req.to_dict())
-            self.worker.join(timeout=5)
+            worker.join(timeout=5)
         except Exception:
             pass
         finally:
-            if self.worker.is_alive():
+            if worker and worker.is_alive():
                 try:
-                    self.worker.terminate()
+                    worker.terminate()
                 except Exception:
                     pass
-            self.worker = None
             self._init_error = None
 
     def is_alive(self) -> bool:
-        return bool(self.worker and self.worker.is_alive())
+        with self._worker_lock:
+            return bool(self.worker and self.worker.is_alive())
 
     def _pop_pending(self, request_id: str) -> Optional[Dict[str, Any]]:
         with self._lock:

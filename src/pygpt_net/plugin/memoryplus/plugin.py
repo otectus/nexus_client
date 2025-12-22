@@ -8,6 +8,7 @@ import threading
 import queue
 import time
 import re
+import tempfile
 import webbrowser
 from collections import OrderedDict
 from datetime import datetime
@@ -118,6 +119,7 @@ class Plugin(BasePlugin):
         self._persistent_failures = 0
         self._last_engine_error_msg = ""
         self._last_engine_error_ts = 0.0
+        self._llm_tokens_warned = False
 
     def init_options(self):
         """Initialize options and tabs"""
@@ -602,8 +604,6 @@ class Plugin(BasePlugin):
         if data_path:
             try:
                 os.makedirs(data_path, exist_ok=True)
-                if not os.access(data_path, os.W_OK):
-                    self._log_error(f"Neo4j data path is not writable: {data_path}")
                 volumes[data_path] = {"bind": "/data", "mode": "rw"}
             except Exception as e:
                 self._log_error(f"Unable to prepare Neo4j data path: {e}")
@@ -965,6 +965,7 @@ class Plugin(BasePlugin):
         main_model_config = self._get_model_config("llm_model")
         insight_model_config = self._get_model_config("insight_model")
         google_key = self.window.core.config.get("api_key_google") or ""
+        llm_max_tokens = self._get_llm_max_tokens()
 
         return {
             # DB
@@ -979,7 +980,7 @@ class Plugin(BasePlugin):
                 "model": main_model_config["model"],
                 "base_url": main_model_config["base_url"],
                 "api_key": main_model_config["api_key"],
-                "max_tokens": self.get_option_value("llm_max_tokens"),
+                "max_tokens": llm_max_tokens,
             },
             # Insight LLM
             "insight_llm": {
@@ -1041,6 +1042,21 @@ class Plugin(BasePlugin):
         except Exception:
             return 3
 
+    def _get_llm_max_tokens(self) -> int:
+        try:
+            value = int(self.get_option_value("llm_max_tokens") or 0)
+        except Exception:
+            value = 0
+        if value <= 0:
+            value = 8192
+        safe_max = 16384
+        if value > safe_max:
+            if not self._llm_tokens_warned:
+                self._llm_tokens_warned = True
+                self._log_error(f"Graphiti max tokens clamped to {safe_max} (requested {value}).")
+            value = safe_max
+        return value
+
     def _configure_cache(self) -> bool:
         group_id = self._get_group_id()
         enable = bool(self.get_option_value("enable_search_cache"))
@@ -1094,14 +1110,52 @@ class Plugin(BasePlugin):
 
         kwargs["group_id"] = self._get_group_id()
 
-        cmd = [sys.executable, runner_path, "--config", json.dumps(config), "--operation", operation]
+        cmd = [sys.executable, runner_path, "--operation", operation]
+        cleanup_paths: List[str] = []
+
+        config_json = json.dumps(config)
+        config_path = self._write_temp_file(config_json, suffix=".json")
+        cleanup_paths.append(config_path)
+        cmd.extend(["--config-file", config_path])
+
+        for key, value in list(kwargs.items()):
+            if value is None:
+                kwargs.pop(key, None)
+
+        content = kwargs.pop("content", None)
+        if isinstance(content, str):
+            if len(content) > 2000:
+                content_path = self._write_temp_file(content, suffix=".txt")
+                cleanup_paths.append(content_path)
+                cmd.extend(["--content-file", content_path])
+            else:
+                cmd.extend(["--content", content])
+
+        query = kwargs.pop("query", None)
+        if isinstance(query, str):
+            if len(query) > 2000:
+                query_path = self._write_temp_file(query, suffix=".txt")
+                cleanup_paths.append(query_path)
+                cmd.extend(["--query-file", query_path])
+            else:
+                cmd.extend(["--query", query])
+
         for k, v in kwargs.items():
             cmd.append(f"--{k}")
             cmd.append(str(v))
-        return cmd
+        return cmd, cleanup_paths
+
+    def _write_temp_file(self, payload: str, suffix: str = "") -> str:
+        fd, path = tempfile.mkstemp(prefix="memoryplus_", suffix=suffix)
+        with os.fdopen(fd, "w", encoding="utf-8") as handle:
+            handle.write(payload)
+        return path
 
     def _run_subprocess(self, cmd, background=False):
         timeout = self._get_runner_timeout()
+        cleanup_paths: List[str] = []
+        if isinstance(cmd, tuple):
+            cmd, cleanup_paths = cmd
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
             response = None
@@ -1124,6 +1178,12 @@ class Plugin(BasePlugin):
             msg = f"Subprocess error: {e}"
             self._log_error(msg)
             return None
+        finally:
+            for path in cleanup_paths:
+                try:
+                    os.remove(path)
+                except Exception:
+                    pass
 
     def _init_engine(self):
         if self._should_manage_container() and not self._neo4j_container_ready:
@@ -1477,7 +1537,10 @@ class Plugin(BasePlugin):
                     break
 
             for name, content, mode in batch:
-                self._process_ingest(name, content, mode)
+                try:
+                    self._process_ingest(name, content, mode)
+                except Exception as exc:
+                    self._log_error(f"Ingest loop error for '{name}': {exc}")
                 self.ingest_queue.task_done()
 
     def _process_ingest(self, name: str, content: str, mode: str):

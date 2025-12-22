@@ -19,6 +19,7 @@ from typing import Tuple
 import locale
 
 from urllib.request import urlopen, Request
+from urllib.error import HTTPError
 
 from PySide6.QtCore import QObject, Signal, Slot, QRunnable
 from packaging.version import parse as parse_version, Version
@@ -251,6 +252,9 @@ class Updater:
             data_json = json.loads(response.read())
             if "thanks" in data_json:
                 self.thanks = self.parse_thanks(data_json["thanks"])
+        except HTTPError as e:
+            if e.code != 404:
+                self.window.core.debug.error(e, console=False)
         except Exception as e:
             self.window.core.debug.error(e, console=False)
 
@@ -334,6 +338,9 @@ class Updater:
             self.window.core.config.set("updater.check.bg.last_time", time.time())
             self.window.core.config.set("updater.check.bg.last_version", newest_version)
 
+        except HTTPError as e:
+            if e.code != 404:
+                self.window.core.debug.error(e, console=False)
         except Exception as e:
             self.window.core.debug.error(e, console=False)
 
