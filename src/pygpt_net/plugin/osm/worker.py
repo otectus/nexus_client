@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.18 03:25:00                  #
 # ================================================== #
 
@@ -109,7 +109,7 @@ class Worker(BaseWorker):
     def _headers(self) -> Dict[str, str]:
         ua = (self.plugin.get_option_value("user_agent") or "").strip()
         if not ua:
-            ua = "pygpt-net-osm-plugin/1.0 (+https://pygpt.net)"
+            ua = "pygpt-net-osm-plugin/1.0 (+https://github.com/otectus/nexus_client)"
         return {
             "User-Agent": ua,
             "Accept": "*/*",

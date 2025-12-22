@@ -1,16 +1,16 @@
-.. PyGPT documentation master file, created by
+.. Nexus documentation master file, created by
    sphinx-quickstart on Fri Mar 24 06:46:09 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-PyGPT - pygpt.net
+Nexus - otecta.discourse.group/
 ====================
 
 | **Release:** 2.6.65 (2025-09-28), Last update: 2025-09-28 08:00
-| **Project Website:** https://pygpt.net
-| **GitHub:** https://github.com/szczyglis-dev/py-gpt
-| **Snap Store:** https://snapcraft.io/pygpt
-| **PyPI:** https://pypi.org/project/pygpt-net
+| **Project Website:** https://otecta.discourse.group/
+| **GitHub:** https://github.com/otectus/nexus_client
+| **Snap Store:** https://otecta.discourse.group/
+| **PyPI:** https://otecta.discourse.group/
 | **Microsoft Store:** https://apps.microsoft.com/detail/XP99R4MX3X65VQ
 
 .. toctree::

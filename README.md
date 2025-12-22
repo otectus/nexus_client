@@ -1,28 +1,26 @@
-# PyGPT - Desktop AI Assistant
+# Nexus - Desktop AI Assistant
 
-[![pygpt](https://snapcraft.io/pygpt/badge.svg)](https://snapcraft.io/pygpt)
+[![nexus](https://github.com/otectus/nexus_client/badge.svg)](https://github.com/otectus/nexus_client)
 
 Release: **2.6.65** | build: **2025-09-28** | Python: **>=3.10, <3.14**
 
-> Official website: https://pygpt.net | Documentation: https://pygpt.readthedocs.io
+> Official website: https://otecta.discourse.group/ | Documentation: https://otecta.discourse.group/
 > 
-> Discord: https://pygpt.net/discord | Snap: https://snapcraft.io/pygpt | PyPi: https://pypi.org/project/pygpt-net
+> Discord: https://otecta.discourse.group/ | Snap: https://otecta.discourse.group/ | PyPi: https://otecta.discourse.group/
 > 
-> Compiled version for Linux (`zip`) and Windows 10/11 (`msi`) 64-bit: https://pygpt.net/#download
-> 
-> ❤️ Donate: https://www.buymeacoffee.com/szczyglis | https://github.com/sponsors/szczyglis-dev
+> Compiled version for Linux (`zip`) and Windows 10/11 (`msi`) 64-bit: https://otecta.discourse.group/
 
 ## Overview
 
-**PyGPT** is **all-in-one** Desktop AI Assistant that provides direct interaction with OpenAI language models, including `GPT-5`, `GPT-4`, `o1`, `o3` and more, through the `OpenAI API`. By utilizing other SDKs and `LlamaIndex`, the application also supports alternative LLMs, like those available on `HuggingFace`, locally available models via `Ollama` (like `gpt-oss`, `Llama 3`,`Mistral`, `DeepSeek V3/R1` or `Bielik`), and other models like `Google Gemini`, `Anthropic Claude`, `Perplexity / Sonar`, and `xAI Grok`.
+**Nexus** is **all-in-one** Desktop AI Assistant that provides direct interaction with OpenAI language models, including `GPT-5`, `GPT-4`, `o1`, `o3` and more, through the `OpenAI API`. By utilizing other SDKs and `LlamaIndex`, the application also supports alternative LLMs, like those available on `HuggingFace`, locally available models via `Ollama` (like `gpt-oss`, `Llama 3`,`Mistral`, `DeepSeek V3/R1` or `Bielik`), and other models like `Google Gemini`, `Anthropic Claude`, `Perplexity / Sonar`, and `xAI Grok`.
 
-This assistant offers multiple modes of operation such as chat, assistants, agents, completions, and image-related tasks like image generation and image analysis. **PyGPT** has filesystem capabilities for file I/O, can generate and run Python code, execute system commands, execute custom commands and manage file transfers. It also allows models to perform web searches with the `DuckDuckGo`, `Google` and `Microsoft Bing`.
+This assistant offers multiple modes of operation such as chat, assistants, agents, completions, and image-related tasks like image generation and image analysis. **Nexus** has filesystem capabilities for file I/O, can generate and run Python code, execute system commands, execute custom commands and manage file transfers. It also allows models to perform web searches with the `DuckDuckGo`, `Google` and `Microsoft Bing`.
 
-For audio interactions, **PyGPT** includes speech synthesis using the `Microsoft Azure`, `Google`, `Eleven Labs` and `OpenAI` Text-To-Speech services. Additionally, it features speech recognition capabilities provided by `OpenAI Whisper`, `Google` and `Bing` enabling the application to understand spoken commands and transcribe audio inputs into text. It features context memory with save and load functionality, enabling users to resume interactions from predefined points in the conversation. Prompt creation and management are streamlined through an intuitive preset system.
+For audio interactions, **Nexus** includes speech synthesis using the `Microsoft Azure`, `Google`, `Eleven Labs` and `OpenAI` Text-To-Speech services. Additionally, it features speech recognition capabilities provided by `OpenAI Whisper`, `Google` and `Bing` enabling the application to understand spoken commands and transcribe audio inputs into text. It features context memory with save and load functionality, enabling users to resume interactions from predefined points in the conversation. Prompt creation and management are streamlined through an intuitive preset system.
 
-**PyGPT**'s functionality extends through plugin support, allowing for custom enhancements (with multiple plugins included). Its multi-modal capabilities make it an adaptable tool for a range of AI-assisted operations, such as text-based interactions, system automation, daily assisting, vision applications, natural language processing, code generation and image creation.
+**Nexus**'s functionality extends through plugin support, allowing for custom enhancements (with multiple plugins included). Its multi-modal capabilities make it an adaptable tool for a range of AI-assisted operations, such as text-based interactions, system automation, daily assisting, vision applications, natural language processing, code generation and image creation.
 
-Multiple operation modes are included, such as chat, text completion, assistant, agents, vision, Chat with Files (via `LlamaIndex`), commands execution, external API calls and image generation, making **PyGPT** a multi-tool for many AI-driven tasks.
+Multiple operation modes are included, such as chat, text completion, assistant, agents, vision, Chat with Files (via `LlamaIndex`), commands execution, external API calls and image generation, making **Nexus** a multi-tool for many AI-driven tasks.
 
 **Showcase** (mp4, version `2.5.65`, build `2025-07-24`):
 
@@ -31,12 +29,12 @@ https://github.com/user-attachments/assets/d8305109-8b1b-41cb-b3ba-8c654271a95c
 **Screenshots** (version `2.5.64`, build `2025-07-23`):
 
 Dark theme:
-![v2_main](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_main.png)
+![v2_main](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_main.png)
 
 Light theme:
-![v2_light](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_light.png)
+![v2_light](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_light.png)
 
-You can download compiled 64-bit versions for Windows and Linux here: https://pygpt.net/#download
+You can download compiled 64-bit versions for Windows and Linux here: https://otecta.discourse.group/
 
 ## Features
 
@@ -82,7 +80,7 @@ You can download compiled 64-bit versions for Windows and Linux here: https://py
 The application is free, open-source, and runs on PCs with `Linux`, `Windows 10`, `Windows 11` and `Mac`. 
 Full Python source code is available on `GitHub`.
 
-**PyGPT uses the user's API key  -  to use the GPT models, 
+**Nexus uses the user's API key  -  to use the GPT models, 
 you must have a registered OpenAI account and your own API key. Local models do not require any API keys.**
 
 You can also use built-it LlamaIndex support to connect to other Large Language Models (LLMs), 
@@ -94,56 +92,56 @@ such as those on HuggingFace. Additional API keys may be required.
 
 You can download compiled binary versions for `Linux` and `Windows` (10/11). 
 
-**PyGPT** binaries require a PC with Windows 10, 11, or Linux. Simply download the installer or the archive with the appropriate version from the download page at https://pygpt.net, extract it, or install it, and then run the application. A binary version for Mac is not available, so you must run PyGPT from PyPi or from the source code on Mac. Currently, only 64-bit binaries are available.
+**Nexus** binaries require a PC with Windows 10, 11, or Linux. Simply download the installer or the archive with the appropriate version from the download page at https://otecta.discourse.group/ extract it, or install it, and then run the application. A binary version for Mac is not available, so you must run Nexus from PyPi or from the source code on Mac. Currently, only 64-bit binaries are available.
 
 Linux version requires `GLIBC` >= `2.35`.
 
 ## Snap Store
 
-You can install **PyGPT** directly from Snap Store:
+You can install **Nexus** directly from Snap Store:
 
 ```commandline
-sudo snap install pygpt
+sudo snap install nexus
 ```
 
 To manage future updates just use:
 
 ```commandline
-sudo snap refresh pygpt
+sudo snap refresh nexus
 ```
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pygpt)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://otecta.discourse.group/)
 
 **Using camera:** to use camera in Snap version you must connect the camera with:
 
 ```commandline
-sudo snap connect pygpt:camera
+sudo snap connect nexus:camera
 ```
 
 **Using microphone:** to use microphone in Snap version you must connect the microphone with:
 
 ```commandline
-sudo snap connect pygpt:audio-record :audio-record
-sudo snap connect pygpt:alsa
+sudo snap connect nexus:audio-record :audio-record
+sudo snap connect nexus:alsa
 ```
 
 **Using audio output:** to use audio output in Snap version you must connect the audio with:
 
 ```commandline
-sudo snap connect pygpt:audio-playback
-sudo snap connect pygpt:alsa
+sudo snap connect nexus:audio-playback
+sudo snap connect nexus:alsa
 ```
 
 **Connecting IPython in Docker in Snap version**:
 
-To use IPython in the Snap version, you must connect PyGPT to the Docker daemon:
+To use IPython in the Snap version, you must connect Nexus to the Docker daemon:
 
 ```commandline
-sudo snap connect pygpt:docker-executables docker:docker-executables
+sudo snap connect nexus:docker-executables docker:docker-executables
 ```
 
 ````commandline
-sudo snap connect pygpt:docker docker:docker-daemon
+sudo snap connect nexus:docker docker:docker-daemon
 ````
 
 ## PyPi (pip)
@@ -160,13 +158,13 @@ source venv/bin/activate
 2. Install from PyPi:
 
 ``` commandline
-pip install pygpt-net
+pip install nexus-client
 ```
 
 3. Once installed run the command to start the application:
 
 ``` commandline
-pygpt
+nexus
 ```
 
 ## Running from GitHub source code
@@ -178,8 +176,8 @@ An alternative method is to download the source code from `GitHub` and execute t
 1. Clone git repository or download .zip file:
 
 ```commandline
-git clone https://github.com/szczyglis-dev/py-gpt.git
-cd py-gpt
+git clone https://github.com/otectus/nexus_client.git
+cd nexus_client
 ```
 
 2. Create a new virtual environment:
@@ -206,8 +204,8 @@ python3 run.py
 1. Clone git repository or download .zip file:
 
 ```commandline
-git clone https://github.com/szczyglis-dev/py-gpt.git
-cd py-gpt
+git clone https://github.com/otectus/nexus_client.git
+cd nexus_client
 ```
 
 2. Install Poetry (if not installed):
@@ -286,7 +284,7 @@ when trying to run the compiled version for Linux, try updating GLIBC to version
 
 
 ```commandline
-sudo snap connect pygpt:camera
+sudo snap connect nexus:camera
 ```
 
 **Access to microphone in Snap version:**
@@ -294,14 +292,14 @@ sudo snap connect pygpt:camera
 To use microphone in Snap version you must connect the microphone with:
 
 ```commandline
-sudo snap connect pygpt:audio-record :audio-record
+sudo snap connect nexus:audio-record :audio-record
 ```
 
 **Snap and AppArmor permission denied**
 
-Snap installs AppArmor profiles for each application by default. The profile for PyGPT is created at:
+Snap installs AppArmor profiles for each application by default. The profile for Nexus is created at:
 
-`/var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt`
+`/var/lib/snapd/apparmor/profiles/snap.nexus.nexus`
 
 The application should work with the default profile; however, if you encounter errors like:
 
@@ -310,7 +308,7 @@ The application should work with the default profile; however, if you encounter 
 add the appropriate access rules to the profile file, for example:
 
 ```
-# /var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt
+# /var/lib/snapd/apparmor/profiles/snap.nexus.nexus
 
 ...
 
@@ -321,9 +319,9 @@ and reload the profiles.
 
 Alternatively, you can try removing snap and reinstalling it:
 
-`sudo snap remove --purge pygpt`
+`sudo snap remove --purge nexus`
 
-`sudo snap install pygpt`
+`sudo snap install nexus`
 
 
 **Access to a microphone and audio in Windows version:**
@@ -336,7 +334,7 @@ On Windows, the proper functioning requires the installation of the `VC++ Redist
 
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 
-The libraries from this environment are used by `PySide6` - one of the base packages used by PyGPT. 
+The libraries from this environment are used by `PySide6` - one of the base packages used by Nexus. 
 The absence of the installed libraries may cause display errors or completely prevent the application from running.
 
 It may also be necessary to add the path `C:\path\to\venv\Lib\python3.x\site-packages\PySide6` to the `PATH` variable.
@@ -386,7 +384,7 @@ To do so, navigate to the menu:
 
 Here, you can add or manage API keys for any supported provider.
 
-![v2_api_keys](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_api_keys.png)
+![v2_api_keys](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_api_keys.png)
 
 **Configuring Provider**
 
@@ -406,7 +404,7 @@ Here, you can add or manage API keys for any supported provider.
 
 **+ Inline Vision and Image generation**
 
-In **PyGPT**, this mode mirrors `ChatGPT`, allowing you to chat with models like `GPT-5`, `GPT-4`, `o1`, `o3`, `Claude`, `Gemini`, `Grok`, `Perplexity (Sonar)`, `Deepseek`, and more. It works with the OpenAI SDK using the `Responses API` and `ChatCompletions API. You can also use SDKs from Google GenAI, Anthropic, or xAI if the native SDK is enabled. You can set the endpoint for `ChatCompletions in Config -> Settings -> API Keys`.
+In **Nexus**, this mode mirrors `ChatGPT`, allowing you to chat with models like `GPT-5`, `GPT-4`, `o1`, `o3`, `Claude`, `Gemini`, `Grok`, `Perplexity (Sonar)`, `Deepseek`, and more. It works with the OpenAI SDK using the `Responses API` and `ChatCompletions API. You can also use SDKs from Google GenAI, Anthropic, or xAI if the native SDK is enabled. You can set the endpoint for `ChatCompletions in Config -> Settings -> API Keys`.
 
 **Tip:** This mode uses the provider SDK directly. If there's no native client built into the app, models like Sonar, or Llama3 are supported in Chat mode via LlamaIndex or OpenAI-compatible API endpoints. The app automatically switches to these endpoints when using non-OpenAI models. You can enable or disable the use of the native API SDK (per provider) in `Settings -> API Keys`. If the native SDK is disabled, the OpenAI SDK will be used via the compatible ChatCompletions API endpoint.
 
@@ -421,20 +419,20 @@ The main part of the interface is a chat window where you see your conversations
 
 Above where you type your messages, the interface shows you the number of tokens your message will use up as you type it – this helps to keep track of usage. There is also a feature to attach and upload files in this area. Go to the `Files and Attachments` section for more information on how to use attachments.
 
-![v2_mode_chat](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_mode_chat.png)
+![v2_mode_chat](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_mode_chat.png)
 
 **Vision:** If you want to send photos from your disk or images from your camera for analysis, and the selected model does not support Vision, you must enable the `Vision (inline)` plugin in the Plugins menu. This plugin allows you to send photos or images from your camera for analysis in any Chat mode.
 
-![v3_vision_plugins](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v3_vision_plugins.png)
+![v3_vision_plugins](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v3_vision_plugins.png)
 
 With this plugin, you can capture an image with your camera or attach an image and send it for analysis to discuss the photograph:
 
-![v3_vision_chat](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v3_vision_chat.png)
+![v3_vision_chat](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v3_vision_chat.png)
 
 **Image generation:** If you want to generate images directly in chat you must enable plugin `Image generation (inline)` in the Plugins menu.
 Plugin allows you to generate images in Chat mode:
 
-![v3_img_chat](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v3_img_chat.png)
+![v3_img_chat](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v3_img_chat.png)
 
 ##  Chat with Files (LlamaIndex)
 
@@ -467,17 +465,17 @@ https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddin
 
 For a visualization from OpenAI's page, see this picture:
 
-![vectors](https://github.com/szczyglis-dev/py-gpt/assets/61396542/4bbb3860-58a0-410d-b5cb-3fbfadf1a367)
+![vectors](https://github.com/otectus/nexus_client/assets/61396542/4bbb3860-58a0-410d-b5cb-3fbfadf1a367)
 
 Source: https://cdn.openai.com/new-and-improved-embedding-model/draft-20221214a/vectors-3.svg
 
 To index your files, simply copy or upload them  into the `data` directory and initiate indexing (embedding) by clicking the `Index all` button, or right-click on a file and select `Index...`. Additionally, you have the option to utilize data from indexed files in any Chat mode by activating the `Chat with Files (LlamaIndex, inline)` plugin.
 
-![v2_idx1](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_idx1.png)
+![v2_idx1](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_idx1.png)
 
 After the file(s) are indexed (embedded in vector store), you can use context from them in chat mode:
 
-![v2_idx2](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_idx2.png)
+![v2_idx2](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_idx2.png)
 
 Built-in file loaders: 
 
@@ -579,17 +577,17 @@ From version `2.0.107` the `davinci` models are deprecated and has been replaced
 
 ### OpenAI DALL-E 3 / Google Imagen 3 and 4
 
-**PyGPT** enables quick and easy image creation with image models like `DALL-E 3`, `gpt-image-1` or `Google Imagen`. 
+**Nexus** enables quick and easy image creation with image models like `DALL-E 3`, `gpt-image-1` or `Google Imagen`. 
 Generating images is akin to a chat conversation  -  a user's prompt triggers the generation, followed by downloading, saving to the computer, and displaying the image onscreen. You can send raw prompt to the model in `Image generation` mode or ask the model for the best prompt.
 
-![v3_img](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v3_img.png)
+![v3_img](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v3_img.png)
 
 Image generation using image models is also available in every mode via plugin `Image Generation (inline)`. Just ask any model, in any mode, like e.g. GPT or Gemini to generate an image and it will do it inline, without need to mode change.
 
 If you want to generate images directly in chat you must enable plugin **Image generation (inline)** in the Plugins menu.
 Plugin allows you to generate images in Chat mode:
 
-![v3_img_chat](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v3_img_chat.png)
+![v3_img_chat](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v3_img_chat.png)
 
 **Video generation**: From version `2.6.32`, video generation (using `Google Veo 3`) is also available.
 
@@ -617,21 +615,21 @@ This lets you quickly use them again for generating new images later on.
 The app keeps a history of all your prompts, allowing you to revisit any session and reuse previous 
 prompts for creating new images.
 
-Images are stored in ``img`` directory in **PyGPT** user data folder.
+Images are stored in ``img`` directory in **Nexus** user data folder.
 
 ## Assistants
 
 This mode uses the OpenAI's **Assistants API**.
 
-This mode expands on the basic chat functionality by including additional external tools like a `Code Interpreter` for executing code, `Retrieval Files` for accessing files, and custom `Functions` for enhanced interaction and integration with other APIs or services. In this mode, you can easily upload and download files. **PyGPT** streamlines file management, enabling you to quickly upload documents and manage files created by the model.
+This mode expands on the basic chat functionality by including additional external tools like a `Code Interpreter` for executing code, `Retrieval Files` for accessing files, and custom `Functions` for enhanced interaction and integration with other APIs or services. In this mode, you can easily upload and download files. **Nexus** streamlines file management, enabling you to quickly upload documents and manage files created by the model.
 
-Setting up new assistants is simple - a single click is all it takes, and they instantly sync with the `OpenAI API`. Importing assistants you've previously created with OpenAI into **PyGPT** is also a seamless process.
+Setting up new assistants is simple - a single click is all it takes, and they instantly sync with the `OpenAI API`. Importing assistants you've previously created with OpenAI into **Nexus** is also a seamless process.
 
-![v2_mode_assistant](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_mode_assistant.png)
+![v2_mode_assistant](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_mode_assistant.png)
 
 In Assistant mode you are allowed to storage your files in remote vector store (per Assistant) and manage them easily from app:
 
-![v2_mode_assistant_upload](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_mode_assistant_upload.png)
+![v2_mode_assistant_upload](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_mode_assistant_upload.png)
 
 Please note that token usage calculation is unavailable in this mode. Nonetheless, file (attachment) 
 uploads are supported. Simply navigate to the `Files` tab to effortlessly manage files and attachments which 
@@ -645,13 +643,13 @@ To enable the use of vector stores, enable the `Chat with Files` checkbox in the
 
 To manage external vector databases, click the DB icon next to the vector database selection list in the Assistant creation and editing window (screen below). In this management window, you can create a new vector database, edit an existing one, or import a list of all existing databases from the OpenAI server:
 
-![v2_assistant_stores](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_assistant_stores.png)
+![v2_assistant_stores](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_assistant_stores.png)
 
 You can define, using `Expire days`, how long files should be automatically kept in the database before deletion (as storing files on OpenAI incurs costs). If the value is set to 0, files will not be automatically deleted.
 
 The vector database in use will be displayed in the list of uploaded files, on the field to the right—if a file is stored in a database, the name of the database will be displayed there; if not, information will be shown indicating that the file is only accessible within the thread:
 
-![v2_assistant_stores_upload](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_assistant_stores_upload.png)
+![v2_assistant_stores_upload](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_assistant_stores_upload.png)
 
 
 ##  Agent (LlamaIndex) 
@@ -674,7 +672,7 @@ In the future, the list of built-in agents will be expanded.
 
 You can create your own types (workflows/patterns) using the built-in visual node-based editor found in the `Tools -> Agents Builder`.
 
-You can also create your own agent by creating a new provider that inherits from `pygpt_net.provider.agents.base`.
+You can also create your own agent by creating a new provider that inherits from `nexus_net.provider.agents.base`.
 
 **Tools and Plugins**  
 
@@ -837,7 +835,7 @@ If you want to use the LlamaIndex mode when running the agent, you can also spec
 
 ```Settings / Agents and experts / Index to use```
 
-![v2_agent_settings](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_agent_settings.png)
+![v2_agent_settings](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_agent_settings.png)
 
 
 ##  Experts (co-op, co-operation mode)
@@ -894,13 +892,13 @@ You can change the environment in which the navigation mode operates by using th
 
 ## Short and long-term memory
 
-**PyGPT** features a continuous chat mode that maintains a long context of the ongoing dialogue. It preserves the entire conversation history and automatically appends it to each new message (prompt) you send to the AI. Additionally, you have the flexibility to revisit past conversations whenever you choose. The application keeps a record of your chat history, allowing you to resume discussions from the exact point you stopped.
+**Nexus** features a continuous chat mode that maintains a long context of the ongoing dialogue. It preserves the entire conversation history and automatically appends it to each new message (prompt) you send to the AI. Additionally, you have the flexibility to revisit past conversations whenever you choose. The application keeps a record of your chat history, allowing you to resume discussions from the exact point you stopped.
 
 ## Handling multiple contexts
 
-On the left side of the application interface, there is a panel that displays a list of saved conversations. You can save numerous contexts and switch between them with ease. This feature allows you to revisit and continue from any point in a previous conversation. **PyGPT** automatically generates a summary for each context, akin to the way `ChatGPT` operates and gives you the option to modify these titles itself.
+On the left side of the application interface, there is a panel that displays a list of saved conversations. You can save numerous contexts and switch between them with ease. This feature allows you to revisit and continue from any point in a previous conversation. **Nexus** automatically generates a summary for each context, akin to the way `ChatGPT` operates and gives you the option to modify these titles itself.
 
-![v2_context_list](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_context_list.png)
+![v2_context_list](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_context_list.png)
 
 You can disable context support in the settings by using the following option:
 
@@ -933,11 +931,11 @@ You can use your own files (for example, to analyze them) during any conversatio
 
 **Attachments**
 
-**PyGPT** makes it simple for users to upload files and send them to the model for tasks like analysis, similar to attaching files in `ChatGPT`. There's a separate `Attachments` tab next to the text input area specifically for managing file uploads. 
+**Nexus** makes it simple for users to upload files and send them to the model for tasks like analysis, similar to attaching files in `ChatGPT`. There's a separate `Attachments` tab next to the text input area specifically for managing file uploads. 
 
 **Tip: Attachments uploaded in group are available in all contexts in group**.
 
-![v2_file_input](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_file_input.png)
+![v2_file_input](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_file_input.png)
 
 You can use attachments to provide additional context to the conversation. Uploaded files will be converted into text using loaders from LlamaIndex, and then embedded into the vector store. You can upload any file format supported by the application through LlamaIndex. Supported formats include:
 
@@ -993,27 +991,27 @@ For example, if the RAG query model is `gpt-4o-mini`, then the default model for
 
 ## Downloading files
 
-**PyGPT** enables the automatic download and saving of files created by the model. This is carried out in the background, with the files being saved to an `data` folder located within the user's working directory. To view or manage these files, users can navigate to the `Files` tab which features a file browser for this specific directory. Here, users have the interface to handle all files sent by the AI.
+**Nexus** enables the automatic download and saving of files created by the model. This is carried out in the background, with the files being saved to an `data` folder located within the user's working directory. To view or manage these files, users can navigate to the `Files` tab which features a file browser for this specific directory. Here, users have the interface to handle all files sent by the AI.
 
 This `data` directory is also where the application stores files that are generated locally by the AI, such as code files or any other data requested from the model. Users have the option to execute code directly from the stored files and read their contents, with the results fed back to the AI. This hands-off process is managed by the built-in plugin system and model-triggered commands. You can also indexing files from this directory (using integrated `LlamaIndex`) and use it's contents as additional context provided to discussion.
 
 The `Files I/O` plugin takes care of file operations in the `data` directory, while the `Code Interpreter` plugin allows for the execution of code from these files.
 
-![v2_file_output](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_file_input.png)
+![v2_file_output](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_file_input.png)
 
 To allow the model to manage files or python code execution, the `+ Tools` option must be active, along with the above-mentioned plugins:
 
-![v2_code_execute](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_code_execute.png)
+![v2_code_execute](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_code_execute.png)
 
 # Presets
 
 ## What is preset?
 
-Presets in **PyGPT** are essentially templates used to store and quickly apply different configurations. Each preset includes settings for the mode you want to use (such as chat, completion, or image generation), an initial system prompt, an assigned name for the AI, a username for the session, and the desired "temperature" for the conversation. A warmer "temperature" setting allows the AI to provide more creative responses, while a cooler setting encourages more predictable replies. These presets can be used across various modes and with models accessed via the `OpenAI API` or `LlamaIndex`.
+Presets in **Nexus** are essentially templates used to store and quickly apply different configurations. Each preset includes settings for the mode you want to use (such as chat, completion, or image generation), an initial system prompt, an assigned name for the AI, a username for the session, and the desired "temperature" for the conversation. A warmer "temperature" setting allows the AI to provide more creative responses, while a cooler setting encourages more predictable replies. These presets can be used across various modes and with models accessed via the `OpenAI API` or `LlamaIndex`.
 
 The application lets you create as many presets as needed and easily switch among them. Additionally, you can clone an existing preset, which is useful for creating variations based on previously set configurations and experimentation.
 
-![v2_preset](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_preset.png)
+![v2_preset](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_preset.png)
 
 ## Example usage
 
@@ -1039,7 +1037,7 @@ The name of the currently active profile is shown as (Profile Name) in the windo
 
 ## Built-in models
 
-PyGPT has a preconfigured list of models (as of 2025-08-31):
+Nexus has a preconfigured list of models (as of 2025-08-31):
 
 - `bielik-11b-v2.3-instruct:Q4_K_M` (Ollama)
 - `chatgpt-4o-latest` (OpenAI)
@@ -1130,7 +1128,7 @@ You can import new models by manually editing `models.json` or by using the mode
 
 ## Adding a custom model
 
-You can add your own models. See the section `Extending PyGPT / Adding a new model` for more info.
+You can add your own models. See the section `Extending Nexus / Adding a new model` for more info.
 
 There is built-in support for those LLM providers:
 
@@ -1168,7 +1166,7 @@ For example, on Linux:
 
 ```ollama run llama3.1```
 
-5) Return to PyGPT and select the correct model from models list to chat with selected model using Ollama running locally.
+5) Return to Nexus and select the correct model from models list to chat with selected model using Ollama running locally.
 
 **Example available models**
 
@@ -1294,7 +1292,7 @@ Required **kwargs:
 
 ## Overview
 
-**PyGPT** can be enhanced with plugins to add new features.
+**Nexus** can be enhanced with plugins to add new features.
 
 The following plugins are currently available, and model can use them instantly:
 
@@ -1369,13 +1367,13 @@ The following plugins are currently available, and model can use them instantly:
 
 ## API calls
 
-**PyGPT** lets you connect the model to the external services using custom defined API calls.
+**Nexus** lets you connect the model to the external services using custom defined API calls.
 
 To activate this feature, turn on the `API calls` plugin found in the `Plugins` menu.
 
 In this plugin you can provide list of allowed API calls, their parameters and request types. The model will replace provided placeholders with required params and make API call to external service.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#api-calls
+Documentation: https://otecta.discourse.group/
 
 ## Audio Input
 
@@ -1383,14 +1381,14 @@ The plugin facilitates speech recognition (by default using the `Whisper` model 
 
 The plugin can be extended with other speech recognition providers.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#audio-input
+Documentation: https://otecta.discourse.group/
 
 ## Audio Output
 
 The plugin lets you turn text into speech using the TTS model from OpenAI or other services like `Microsoft Azure`, `Google`, and `Eleven Labs`. You can add more text-to-speech providers to it too. `OpenAI TTS` does not require any additional API keys or extra configuration; it utilizes the main OpenAI key. 
 Microsoft Azure requires to have an Azure API Key. Before using speech synthesis via `Microsoft Azure`, `Google` or `Eleven Labs`, you must configure the audio plugin with your API keys, regions and voices if required.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#audio-output
+Documentation: https://otecta.discourse.group/
 
 ## Autonomous Agent (inline)
 
@@ -1402,7 +1400,7 @@ in self-dialogue, answering his own questions and comments, in order to find the
 
 This mode is similar to `Auto-GPT` - it can be used to create more advanced inferences and to solve problems by breaking them down into subtasks that the model will autonomously perform one after another until the goal is achieved. The plugin is capable of working in cooperation with other plugins, thus it can utilize tools such as web search, access to the file system, or image generation using `DALL-E`.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#autonomous-agent-inline
+Documentation: https://otecta.discourse.group/
 
 ## Bitbucket
 
@@ -1427,13 +1425,13 @@ The Bitbucket plugin allows for seamless integration with the Bitbucket Cloud AP
 - Merge an existing pull request.
 - Search for repositories.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#bitbucket
+Documentation: https://otecta.discourse.group/
 
 ## Chat with Files (LlamaIndex, inline)
 
 Plugin integrates `LlamaIndex` storage in any chat and provides additional knowledge into context.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#chat-with-files-llamaindex-inline
+Documentation: https://otecta.discourse.group/
 
 ## Code Interpreter
 
@@ -1451,26 +1449,26 @@ You can find the installation instructions here: https://docs.docker.com/engine/
 
 **Tip: connecting IPython in Docker in Snap version**:
 
-To use IPython in the Snap version, you must connect PyGPT to the Docker daemon:
+To use IPython in the Snap version, you must connect Nexus to the Docker daemon:
 
 ```commandline
-sudo snap connect pygpt:docker-executables docker:docker-executables
+sudo snap connect nexus:docker-executables docker:docker-executables
 ```
 
 ````commandline
-sudo snap connect pygpt:docker docker:docker-daemon
+sudo snap connect nexus:docker docker:docker-daemon
 ````
 
 **Code interpreter:** a real-time Python Code Interpreter is built-in. Click the `<>` icon to open the interpreter window. Both the input and output of the interpreter are connected to the plugin. Any output generated by the executed code will be displayed in the interpreter. Additionally, you can request the model to retrieve contents from the interpreter window output.
 
-![v2_python](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_python.png)
+![v2_python](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_python.png)
 
 **INFO:** Executing Python code using IPython in compiled versions requires an enabled sandbox (Docker container). You can connect the Docker container via `Plugins -> Settings`.
 
 
 **Tip:** always remember to enable the `+ Tools` option to allow execute commands from the plugins.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#code-interpreter
+Documentation: https://otecta.discourse.group/
 
 ## Context history (calendar, inline)
 
@@ -1491,23 +1489,23 @@ Examples of use, you can ask e.g. for the following:
 
 etc.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#context-history-calendar-inline
+Documentation: https://otecta.discourse.group/
 
 ## Crontab / Task scheduler
 
 Plugin provides cron-based job scheduling - you can schedule tasks/prompts to be sent at any time using cron-based syntax for task setup.
 
-![v2_crontab](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_crontab.png)
+![v2_crontab](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_crontab.png)
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#crontab-task-scheduler
+Documentation: https://otecta.discourse.group/
 
 ## Custom Commands
 
-With the `Custom Commands` plugin, you can integrate **PyGPT** with your operating system and scripts or applications. You can define an unlimited number of custom commands and instruct model on when and how to execute them. Configuration is straightforward, and **PyGPT** includes a simple tutorial command for testing and learning how it works:
+With the `Custom Commands` plugin, you can integrate **Nexus** with your operating system and scripts or applications. You can define an unlimited number of custom commands and instruct model on when and how to execute them. Configuration is straightforward, and **Nexus** includes a simple tutorial command for testing and learning how it works:
 
-![v2_custom_cmd](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_custom_cmd.png)
+![v2_custom_cmd](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_custom_cmd.png)
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#custom-commands
+Documentation: https://otecta.discourse.group/
 
 ##  Experts (inline)
 
@@ -1527,7 +1525,7 @@ The plugin integrates with Facebook's Graph API to enable various actions such a
 - Deleting a post from a Facebook page.
 - Uploading a photo to a Facebook page.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#facebook
+Documentation: https://otecta.discourse.group/
 
 ## Files I/O
 
@@ -1552,7 +1550,7 @@ Plugin capabilities include:
 
 If a file being created (with the same name) already exists, a prefix including the date and time is added to the file name.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#files-i-o
+Documentation: https://otecta.discourse.group/
 
 ## GitHub
 
@@ -1578,7 +1576,7 @@ The plugin provides seamless integration with GitHub, allowing various operation
 - Search for issues based on a query.
 - Search for code based on a query.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#github
+Documentation: https://otecta.discourse.group/
 
 ## Google (Gmail, Drive, Calendar, Contacts, YT, Keep, Docs, Maps, Colab)
 
@@ -1646,25 +1644,25 @@ The plugin integrates with various Google services, enabling features such as em
   - Renaming a notebook.
   - Duplicating a notebook.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#google-gmail-drive-calendar-contacts-yt-keep-docs-maps-colab
+Documentation: https://otecta.discourse.group/
 
 ## Image Generation (inline)
 
 The plugin integrates `DALL-E 3` image generation with any chat mode. Simply enable it and request an image in Chat mode, using a standard model such as `GPT-4`. The plugin does not require the `+ Tools` option to be enabled.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#image-generation-inline
+Documentation: https://otecta.discourse.group/
 
 ## Mailer
 
 Enables the sending, receiving, and reading of emails from the inbox. Currently, only SMTP is supported. More options coming soon.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#mailer
+Documentation: https://otecta.discourse.group/
 
 ## MCP (Model Context Protocol)
 
-With the `MCP` plugin, you can connect **PyGPT** to remote tools exposed by `Model Context Protocol` servers (stdio, Streamable HTTP, or SSE). The plugin discovers available tools on your configured servers and publishes them to the model as callable commands with proper parameter schemas. You can whitelist/blacklist tools per server and optionally cache discovery results for speed.
+With the `MCP` plugin, you can connect **Nexus** to remote tools exposed by `Model Context Protocol` servers (stdio, Streamable HTTP, or SSE). The plugin discovers available tools on your configured servers and publishes them to the model as callable commands with proper parameter schemas. You can whitelist/blacklist tools per server and optionally cache discovery results for speed.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#mcp
+Documentation: https://otecta.discourse.group/
 
 ## Mouse And Keyboard
 
@@ -1683,7 +1681,7 @@ Plugin capabilities include:
 - Control the keyboard (pressing keys, typing text)
 - Making screenshots
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#mouse-and-keyboard
+Documentation: https://otecta.discourse.group/
 
 ## OpenStreetMap
 
@@ -1697,7 +1695,7 @@ Provides everyday mapping utilities using OpenStreetMap services:
 
 Images are saved under `data/openstreetmap/` in the user data directory.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#openstreetmap
+Documentation: https://otecta.discourse.group/
 
 ## Real Time
 
@@ -1706,7 +1704,7 @@ You have the option to include just the date, just the time, or both.
 
 When enabled, it quietly enhances each system prompt with current time information before sending it to model.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#real-time
+Documentation: https://otecta.discourse.group/
 
 ## Serial port / USB
 
@@ -1716,7 +1714,7 @@ Provides commands for reading and sending data to USB ports.
 
 You can send commands to, for example, an Arduino or any other controllers using the serial port for communication.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#serial-port-usb
+Documentation: https://otecta.discourse.group/
 
 ## Server (SSH/FTP)
 
@@ -1724,7 +1722,7 @@ The Server plugin provides integration for remote server management via SSH, SFT
 
 For security reasons, the model will not see any credentials, only the server name and port fields (see the docs)
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#server-ssh-ftp
+Documentation: https://otecta.discourse.group/
 
 ## Slack
 
@@ -1739,20 +1737,20 @@ The Slack plugin integrates with the Slack Web API, enabling interaction with Sl
 - Deleting a chat message.
 - Uploading files to Slack.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#slack
+Documentation: https://otecta.discourse.group/
 
 ## System (OS)
 
 The plugin provides access to the operating system and executes system commands.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#system-os
+Documentation: https://otecta.discourse.group/
 
 ## System Prompt Extra (append)
 
 The plugin appends additional system prompts (extra data) from a list to every current system prompt. 
 You can enhance every system prompt with extra instructions that will be automatically appended to the system prompt.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#system-prompt-extra-append
+Documentation: https://otecta.discourse.group/
 
 ## Telegram
 
@@ -1768,7 +1766,7 @@ The plugin enables integration with Telegram for both bots and user accounts thr
 - Listing recent dialogs or chats in user mode.
 - Retrieving recent messages from a specific chat or channel in user mode.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#telegram
+Documentation: https://otecta.discourse.group/
 
 ## Tuya (IoT)
 
@@ -1782,7 +1780,7 @@ The Tuya plugin integrates with Tuya's Smart Home platform, enabling seamless in
 * Send custom commands to devices for more advanced control.
 * Read sensor values and normalize them for easy interpretation.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#tuya-iot
+Documentation: https://otecta.discourse.group/
 
 ## Vision (inline)
 
@@ -1790,7 +1788,7 @@ The plugin integrates vision capabilities across all chat modes, not just Vision
 
 **Tip:** When using `Vision (inline)` by utilizing a plugin in standard mode, such as `Chat` (not `Vision` mode), the `+ Vision` special checkbox will appear at the bottom of the Chat window. It will be automatically enabled any time you provide content for analysis (like an uploaded photo). When the checkbox is enabled, the vision model is used. If you wish to exit the vision model after image analysis, simply uncheck the checkbox. It will activate again automatically when the next image content for analysis is provided.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#vision-inline
+Documentation: https://otecta.discourse.group/
 
 ## Voice Control (inline)
 
@@ -1800,13 +1798,13 @@ See the ``Accessibility`` section for more details.
 
 ## Web Search
 
-**PyGPT** lets you connect model to the internet and carry out web searches in real time as you make queries.
+**Nexus** lets you connect model to the internet and carry out web searches in real time as you make queries.
 
 To activate this feature, turn on the `Web Search` plugin found in the `Plugins` menu.
 
 Web searches are provided by `Google Custom Search Engine` and `Microsoft Bing` APIs and can be extended with other search engine providers. 
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#web-search
+Documentation: https://otecta.discourse.group/
 
 ## Wikipedia
 
@@ -1820,13 +1818,13 @@ The Wikipedia plugin allows for comprehensive interactions with Wikipedia, inclu
 * Discover articles by geographic location or randomly.
 * Open articles directly in your web browser.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#wikipedia
+Documentation: https://otecta.discourse.group/
 
 ## Wolfram Alpha
 
 Provides computational knowledge via Wolfram Alpha: short answers, full JSON pods, numeric and symbolic math (solve, derivatives, integrals), unit conversions, matrix operations, and plots rendered as images. Images are saved under `data/wolframalpha/` in the user data directory.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#wolfram-alpha
+Documentation: https://otecta.discourse.group/
 
 ## X/Twitter
 
@@ -1851,13 +1849,13 @@ The X/Twitter plugin integrates with the X platform, allowing for comprehensive 
 - Upload media files such as images or videos for tweeting.
 - Set alternative text for uploaded media for accessibility.
 
-Documentation: https://pygpt.readthedocs.io/en/latest/plugins.html#x-twitter
+Documentation: https://otecta.discourse.group/
 
 # Creating Your Own Plugins
 
-You can create your own plugin for **PyGPT** at any time. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the `plugin` directory - you can use them as coding examples for your own plugins.
+You can create your own plugin for **Nexus** at any time. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the `plugin` directory - you can use them as coding examples for your own plugins.
 
-PyGPT can be extended with:
+Nexus can be extended with:
 
 - custom models
 
@@ -1878,15 +1876,15 @@ PyGPT can be extended with:
 - custom agents (LlamaIndex or OpenAI Agents)
 
 
-See the section `Extending PyGPT / Adding a custom plugin` for more details.
+See the section `Extending Nexus / Adding a custom plugin` for more details.
 
 # Functions, commands and tools
 
 **Tip** remember to enable the `+ Tools` checkbox to enable execution of tools and commands from plugins.
 
-From version `2.2.20` PyGPT uses native API function calls by default. You can go back to internal syntax (described below) by switching off option `Config -> Settings -> Prompts -> Use native API function calls`. You must also enable `Tool calls` checkbox in model advanced settings to use native function calls with the specified model.
+From version `2.2.20` Nexus uses native API function calls by default. You can go back to internal syntax (described below) by switching off option `Config -> Settings -> Prompts -> Use native API function calls`. You must also enable `Tool calls` checkbox in model advanced settings to use native function calls with the specified model.
 
-In background, **PyGPT** uses an internal syntax to define commands and their parameters, which can then be used by the model and executed on the application side or even directly in the system. This syntax looks as follows (example command below):
+In background, **Nexus** uses an internal syntax to define commands and their parameters, which can then be used by the model and executed on the application side or even directly in the system. This syntax looks as follows (example command below):
 
 ```<tool>{"cmd": "send_email", "params": {"quote": "Why don't skeletons fight each other? They don't have the guts!"}}</tool>```
 
@@ -1894,7 +1892,7 @@ It is a JSON object wrapped between `<tool>` tags. The application extracts the 
 
 **Tip:** The `+ Tools` option checkbox must be enabled to allow the execution of commands from plugins. Disable the option if you do not want to use commands, to prevent additional token usage (as the command execution system prompt consumes additional tokens and may slow down local models).
 
-![v2_code_execute](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_code_execute.png)
+![v2_code_execute](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_code_execute.png)
 
 When native API function calls are disabled, a special system prompt responsible for invoking commands is added to the main system prompt if the `+ Tools` option is active.
 
@@ -1905,7 +1903,7 @@ https://platform.openai.com/docs/guides/function-calling
 
 https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models
 
-PyGPT offers compatibility of these functions with commands (tools) used in the application. All you need to do is define the appropriate functions using the correct JSON schema, and PyGPT will do the rest, translating such syntax on the fly into its own internal format.
+Nexus offers compatibility of these functions with commands (tools) used in the application. All you need to do is define the appropriate functions using the correct JSON schema, and Nexus will do the rest, translating such syntax on the fly into its own internal format.
 
 Local functions and tools from plugins are available in all modes, except `Assistants`.
 
@@ -1952,17 +1950,17 @@ In response you will receive prepared command, like this:
 
 ```<tool>{"cmd": "send_email", "params": {"quote": "Why do we tell actors to 'break a leg?' Because every play has a cast!"}}</tool>```
 
-After receiving this, PyGPT will execute the system `echo` command with params given from `params` field and replacing `{quote}` placeholder with `quote` param value.
+After receiving this, Nexus will execute the system `echo` command with params given from `params` field and replacing `{quote}` placeholder with `quote` param value.
 
 As a result, response like this will be sent to the model:
 
 ```[{"request": {"cmd": "send_email"}, "result": "OK. Email sent: Why do we tell actors to 'break a leg?' Because every play has a cast!"}]```
 
-With this flow you can use both forms - API provider JSON schema and PyGPT schema - to define and execute commands and functions in the application. They will cooperate with each other and you can use them interchangeably.
+With this flow you can use both forms - API provider JSON schema and Nexus schema - to define and execute commands and functions in the application. They will cooperate with each other and you can use them interchangeably.
 
 # Tools
 
-PyGPT features several useful tools, including:
+Nexus features several useful tools, including:
 
 - Notepad
 - Painter
@@ -1978,30 +1976,30 @@ PyGPT features several useful tools, including:
 - Web Browser (Chromium)
 - Agents Builder (beta)
 
-![v2_tool_menu](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_tool_menu.png)
+![v2_tool_menu](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_tool_menu.png)
 
 
 ## Notepad
 
 The application has a built-in notepad, divided into several tabs. This can be useful for storing information in a convenient way, without the need to open an external text editor. The content of the notepad is automatically saved whenever the content changes.
 
-![v2_notepad](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_notepad.png)
+![v2_notepad](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_notepad.png)
 
 ## Painter
 
 Using the `Painter` tool, you can create quick sketches and submit them to the model for analysis. You can also edit opened from disk or captured from camera images, for example, by adding elements like arrows or outlines to objects. Additionally, you can capture screenshots from the system - the captured image is placed in the drawing tool and attached to the query being sent.
 
-![v2_draw](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_draw.png)
+![v2_draw](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_draw.png)
 
 To capture the screenshot just click on the `Ask with screenshot` option in a tray-icon dropdown:
 
-![v2_screenshot](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_screenshot.png)
+![v2_screenshot](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_screenshot.png)
 
 ## Calendar
 
 Using the calendar, you can go back to selected conversations from a specific day and add daily notes. After adding a note, it will be marked on the list, and you can change the color of its label by right-clicking and selecting `Set label color`. By clicking on a particular day of the week, conversations from that day will be displayed.
 
-![v2_calendar](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_calendar.png)
+![v2_calendar](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_calendar.png)
 
 
 ## Indexer
@@ -2009,7 +2007,7 @@ Using the calendar, you can go back to selected conversations from a specific da
 
 This tool allows indexing of local files or directories and external web content to a vector database, which can then be used with the `Chat with Files` mode. Using this tool, you can manage local indexes and add new data with built-in `LlamaIndex` integration.
 
-![v2_tool_indexer](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_tool_indexer.png)
+![v2_tool_indexer](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_tool_indexer.png)
 
 ## Media Player
 
@@ -2060,7 +2058,7 @@ To launch the Agent Editor, navigate to:
 
 `Tools -> Agents Builder`
 
-![nodes](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/nodes.png)
+![nodes](https://github.com/otectus/nexus_client/raw/master/docs/source/images/nodes.png)
 
 This tool allows you to create workflows for agents using a node editor, without writing any code. You can add a new agent type, and it will appear in the list of presets.
 
@@ -2131,18 +2129,18 @@ the system prompt, any additional data, and those used within the context (the m
 
 **Remember that these are only approximate calculations and do not include, for example, the number of tokens consumed by some plugins. You can find the exact number of tokens used on provider's website.**
 
-![v2_tokens1](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_tokens1.png)
+![v2_tokens1](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_tokens1.png)
 
 ## Total tokens
 
 After receiving a response from the model, the application displays the actual total number of tokens used for the query (received from the API).
 
-![v2_tokens2](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_tokens2.png)
+![v2_tokens2](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_tokens2.png)
 
 
 # Accessibility
 
-Since version `2.2.8`, PyGPT has added beta support for disabled people and voice control. This may be very useful for blind people.
+Since version `2.2.8`, Nexus has added beta support for disabled people and voice control. This may be very useful for blind people.
 
 In the `Config / Accessibility` menu, you can turn on accessibility features such as:
 
@@ -2261,7 +2259,7 @@ For voice translation of on-screen events and information about completed comman
 ```bash
 Use voice synthesis to describe events on the screen.
 ```
-![v2_access](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_access.png)
+![v2_access](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_access.png)
 
 # Configuration
 
@@ -2273,7 +2271,7 @@ The following basic options can be modified directly within the application:
 Config -> Settings...
 ```
 
-![v2_settings](https://github.com/szczyglis-dev/py-gpt/raw/master/docs/source/images/v2_settings.png)
+![v2_settings](https://github.com/otectus/nexus_client/raw/master/docs/source/images/v2_settings.png)
 
 **General**
 
@@ -2699,7 +2697,7 @@ The configuration is stored in JSON files for easy manual modification outside o
 These configuration files are located in the user's work directory within the following subdirectory:
 
 ``` ini
-{HOME_DIR}/.config/pygpt-net/
+{HOME_DIR}/.config/nexus-client/
 ```
 
 ## Manual configuration
@@ -2707,7 +2705,7 @@ These configuration files are located in the user's work directory within the fo
 You can manually edit the configuration files in this directory (this is your work directory):
 
 ``` ini
-{HOME_DIR}/.config/pygpt-net/
+{HOME_DIR}/.config/nexus-client/
 ```
 
 - `assistants.json` - stores the list of assistants.
@@ -2739,7 +2737,7 @@ python3 ./run.py --workdir="/path/to/workdir"
 or, for the binary version:
 
 ```
-pygpt.exe --workdir="/path/to/workdir"
+nexus.exe --workdir="/path/to/workdir"
 ```
 
 
@@ -2767,7 +2765,7 @@ This allows you to overwrite language files or CSS styles in a very simple way -
 
 
 ``` ini
-{HOME_DIR}/.config/pygpt-net/
+{HOME_DIR}/.config/nexus-client/
 ```
 
 - `locale` - a directory for locales in `.ini` format.
@@ -2985,7 +2983,7 @@ https://docs.llamaindex.ai/en/stable/api_reference/storage/vector_store.html
 
 Which keyword arguments are passed to providers?
 
-For `ChromaVectorStore` and `SimpleVectorStore` all arguments are set by PyGPT and passed internally (you do not need to configure anything).
+For `ChromaVectorStore` and `SimpleVectorStore` all arguments are set by Nexus and passed internally (you do not need to configure anything).
 
 For other providers you can provide these arguments:
 
@@ -3019,13 +3017,13 @@ If you want to only query index (without chat) you can enable `Query index only 
 
 You can create a custom vector store provider or data loader for your data and develop a custom launcher for the application. 
 
-See the section `Extending PyGPT / Adding a custom Vector Store provider` for more details.
+See the section `Extending Nexus / Adding a custom Vector Store provider` for more details.
 
 # Updates
 
-### Updating PyGPT
+### Updating Nexus
 
-**PyGPT** comes with an integrated update notification system. When a new version with additional features is released, you'll receive an alert within the app. 
+**Nexus** comes with an integrated update notification system. When a new version with additional features is released, you'll receive an alert within the app. 
 
 To get the new version, simply download it and start using it in place of the old one. All your custom settings like configuration, presets, indexes, and past conversations will be kept and ready to use right away in the new version.
 
@@ -3038,7 +3036,7 @@ In `Settings -> Developer` dialog, you can enable the `Show debug menu` option t
 By default, all errors and exceptions are logged to the file:
 
 ```ini
-{HOME_DIR}/.config/pygpt-net/app.log
+{HOME_DIR}/.config/nexus-client/app.log
 ```
 
 To increase the logging level (`ERROR` level is default), run the application with `--debug` argument:
@@ -3078,13 +3076,13 @@ You can also manualy enable legacy mode by editing config file - open the `%WORK
 "render.open_gl": false,
 ```
 
-# Extending PyGPT
+# Extending Nexus
 
 ## Quick start
 
-You can create your own extensions for **PyGPT** at any time.
+You can create your own extensions for **Nexus** at any time.
 
-PyGPT can be extended with:
+Nexus can be extended with:
 
 - custom models
 
@@ -3124,13 +3122,13 @@ See the `examples` directory in this repository with examples of custom launcher
 
 - `examples/example_web_search.py`
 
-These example files can be used as a starting point for creating your own extensions for **PyGPT**.
+These example files can be used as a starting point for creating your own extensions for **Nexus**.
 
-Extending PyGPT with custom plugins, LLMs wrappers and vector stores:
+Extending Nexus with custom plugins, LLMs wrappers and vector stores:
 
 - You can pass custom plugin instances, LLMs wrappers and vector store providers to the launcher.
 
-- This is useful if you want to extend PyGPT with your own plugins, vectors storage and LLMs.
+- This is useful if you want to extend Nexus with your own plugins, vectors storage and LLMs.
 
 To register custom plugins:
 
@@ -3218,7 +3216,7 @@ There is built-in support for those LLM providers:
 
 ### Creating Your Own Plugin
 
-You can create your own plugin for **PyGPT**. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the `plugin` directory - you can use them as coding examples for your own plugins.
+You can create your own plugin for **Nexus**. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the `plugin` directory - you can use them as coding examples for your own plugins.
 
 **Examples (tutorial files)** 
 
@@ -3226,7 +3224,7 @@ See the example plugin in this `examples` directory:
 
 - `examples/example_plugin.py`
 
-These example file can be used as a starting point for creating your own plugin for **PyGPT**.
+These example file can be used as a starting point for creating your own plugin for **Nexus**.
 
 To register a custom plugin:
 
@@ -3240,7 +3238,7 @@ To register a custom plugin:
 ```python
 # custom_launcher.py
 
-from pygpt_net.app import run
+from nexus_net.app import run
 from plugins import CustomPlugin, OtherCustomPlugin
 from llms import CustomLLM
 from vector_stores import CustomVectorStore
@@ -3271,7 +3269,7 @@ To do this, create a method named `handle(self, event, *args, **kwargs)` and han
 ```python
 # custom_plugin.py
 
-from pygpt_net.core.events import Event
+from nexus_net.core.events import Event
 
 
 def handle(self, event: Event, *args, **kwargs):
@@ -3294,7 +3292,7 @@ def handle(self, event: Event, *args, **kwargs):
 
 ### List of Events
 
-Event names are defined in `Event` class in `pygpt_net.core.events`.
+Event names are defined in `Event` class in `nexus_net.core.events`.
 
 Syntax: `event name` - triggered on, `event data` *(data type)*:
 
@@ -3389,19 +3387,19 @@ Events flow can be debugged by enabling the option `Config -> Settings -> Develo
 
 ## Adding a custom LLM provider
 
-Handling LLMs with LlamaIndex is implemented through separated wrappers. This allows for the addition of support for any provider and model available via LlamaIndex. All built-in wrappers for the models and its providers are placed in the `pygpt_net.provider.llms`.
+Handling LLMs with LlamaIndex is implemented through separated wrappers. This allows for the addition of support for any provider and model available via LlamaIndex. All built-in wrappers for the models and its providers are placed in the `nexus_net.provider.llms`.
 
 These wrappers are loaded into the application during startup using `launcher.add_llm()` method:
 
 ```python
 # app.py
 
-from pygpt_net.provider.api.openai import OpenAILLM
-from pygpt_net.provider.llms.azure_openai import AzureOpenAILLM
-from pygpt_net.provider.llms.anthropic import AnthropicLLM
-from pygpt_net.provider.llms.hugging_face import HuggingFaceLLM
-from pygpt_net.provider.llms.ollama import OllamaLLM
-from pygpt_net.provider.llms.google import GoogleLLM
+from nexus_net.provider.api.openai import OpenAILLM
+from nexus_net.provider.llms.azure_openai import AzureOpenAILLM
+from nexus_net.provider.llms.anthropic import AnthropicLLM
+from nexus_net.provider.llms.hugging_face import HuggingFaceLLM
+from nexus_net.provider.llms.ollama import OllamaLLM
+from nexus_net.provider.llms.google import GoogleLLM
 
 
 def run(**kwargs):
@@ -3427,7 +3425,7 @@ def run(**kwargs):
 
 To add support for providers not included by default, you can create your own wrapper that returns a custom model to the application and then pass this custom wrapper to the launcher.
 
-Extending **PyGPT** with custom plugins and LLM wrappers is straightforward:
+Extending **Nexus** with custom plugins and LLM wrappers is straightforward:
 
 - Pass instances of custom plugins and LLM wrappers directly to the launcher.
 
@@ -3441,7 +3439,7 @@ To register custom LLM wrappers:
 ```python
 # launcher.py
 
-from pygpt_net.app import run
+from nexus_net.app import run
 from plugins import CustomPlugin, OtherCustomPlugin
 from llms import CustomLLM
 
@@ -3481,9 +3479,9 @@ See the `examples` directory in this repository with examples of custom launcher
 
 - `examples/example_web_search.py`
 
-These example files can be used as a starting point for creating your own extensions for **PyGPT**.
+These example files can be used as a starting point for creating your own extensions for **Nexus**.
 
-To integrate your own model or provider into **PyGPT**, you can also reference the classes located in the `pygpt_net.provider.llms`. These samples can act as an more complex example for your custom class. Ensure that your custom wrapper class includes two essential methods: `chat` and `completion`. These methods should return the respective objects required for the model to operate in `chat` and `completion` modes.
+To integrate your own model or provider into **Nexus**, you can also reference the classes located in the `nexus_net.provider.llms`. These samples can act as an more complex example for your custom class. Ensure that your custom wrapper class includes two essential methods: `chat` and `completion`. These methods should return the respective objects required for the model to operate in `chat` and `completion` modes.
 
 Every single LLM provider (wrapper) inherits from `BaseLLM` class and can provide 2 components: provider for LlamaIndex, and provider for Embeddings.
 
@@ -3497,11 +3495,11 @@ You can create a custom vector store provider or data loader for your data and d
 # app.py
 
 # vector stores
-from pygpt_net.provider.vector_stores.chroma import ChromaProvider
-from pygpt_net.provider.vector_stores.elasticsearch import ElasticsearchProvider
-from pygpt_net.provider.vector_stores.pinecode import PinecodeProvider
-from pygpt_net.provider.vector_stores.redis import RedisProvider
-from pygpt_net.provider.vector_stores.simple import SimpleProvider
+from nexus_net.provider.vector_stores.chroma import ChromaProvider
+from nexus_net.provider.vector_stores.elasticsearch import ElasticsearchProvider
+from nexus_net.provider.vector_stores.pinecode import PinecodeProvider
+from nexus_net.provider.vector_stores.redis import RedisProvider
+from nexus_net.provider.vector_stores.simple import SimpleProvider
 
 def run(**kwargs):
     # ...
@@ -3527,7 +3525,7 @@ To register your custom vector store provider just register it by passing provid
 
 # custom_launcher.py
 
-from pygpt_net.app import run
+from nexus_net.app import run
 from plugins import CustomPlugin, OtherCustomPlugin
 from llms import CustomLLM
 from vector_stores import CustomVectorStore
@@ -3550,8 +3548,8 @@ run(
 )
 ```
 
-The vector store provider must be an instance of `pygpt_net.provider.vector_stores.base.BaseStore`. 
-You can review the code of the built-in providers in `pygpt_net.provider.vector_stores` and use them as examples when creating a custom provider.
+The vector store provider must be an instance of `nexus_net.provider.vector_stores.base.BaseStore`. 
+You can review the code of the built-in providers in `nexus_net.provider.vector_stores` and use them as examples when creating a custom provider.
 
 ### Adding a custom data loader
 
@@ -3560,7 +3558,7 @@ You can review the code of the built-in providers in `pygpt_net.provider.vector_
 
 # custom_launcher.py
 
-from pygpt_net.app import run
+from nexus_net.app import run
 from plugins import CustomPlugin, OtherCustomPlugin
 from llms import CustomLLM
 from vector_stores import CustomVectorStore
@@ -3588,8 +3586,8 @@ run(
 )
 ```
 
-The data loader must be an instance of `pygpt_net.provider.loaders.base.BaseLoader`. 
-You can review the code of the built-in loaders in `pygpt_net.provider.loaders` and use them as examples when creating a custom loader.
+The data loader must be an instance of `nexus_net.provider.loaders.base.BaseLoader`. 
+You can review the code of the built-in loaders in `nexus_net.provider.loaders` and use them as examples when creating a custom loader.
 
 
 # DISCLAIMER
@@ -3665,55 +3663,22 @@ may consume additional tokens that are not displayed in the main window.
 
 # Credits and links
 
-**Official website:** <https://pygpt.net>
+**Official website:** <https://otecta.discourse.group/>
 
-**Documentation:** <https://pygpt.readthedocs.io>
+**GitHub:** <https://github.com/otectus/nexus_client>
 
-**Support and donate:** <https://pygpt.net/#donate>
+**Discord:** <https://otecta.discourse.group/>
 
-**GitHub:** <https://github.com/szczyglis-dev/py-gpt>
+**Author:** Otectus (United States)
 
-**Discord:** <https://pygpt.net/discord>
-
-**Snap Store:** <https://snapcraft.io/pygpt>
-
-**Microsoft Store:** <https://apps.microsoft.com/detail/XP99R4MX3X65VQ>
-
-**PyPI:** <https://pypi.org/project/pygpt-net>
-
-**Author:** Marcin Szczygliński (Poland, EU)
-
-**Contact:** <info@pygpt.net>
+**Contact:** <noctural.coded@gmail.com>
 
 **License:** MIT License
 
-# Special thanks
-
-GitHub's community:
-
-- [@BillionShields](https://github.com/BillionShields)
-
-- [@gfsysa](https://github.com/gfsysa)
-
-- [@glinkot](https://github.com/glinkot)
-
-- [@kaneda2004](https://github.com/kaneda2004)
-
-- [@KingOfTheCastle](https://github.com/KingOfTheCastle)
-
-- [@linnflux](https://github.com/linnflux)
-
-- [@lukasz-pekala](https://github.com/lukasz-pekala)
-
-- [@moritz-t-w](https://github.com/moritz-t-w)
-
-- [@oleksii-honchar](https://github.com/oleksii-honchar)
-
-- [@yf007](https://github.com/yf007)
 
 ## Third-party libraries
 
-Full list of external libraries used in this project is located in the [requirements.txt](https://github.com/szczyglis-dev/py-gpt/blob/master/requirements.txt) file in the main folder of the repository.
+Full list of external libraries used in this project is located in the [requirements.txt](https://github.com/otectus/nexus_client/blob/master/requirements.txt) file in the main folder of the repository.
 
 All used SVG icons are from `Material Design Icons` provided by Google:
 

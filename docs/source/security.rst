@@ -11,7 +11,7 @@ Reporting a Vulnerability
 
 If you believe you have found a security issue in our project, we encourage you to report it to us. We welcome any responsible disclosure of potential security vulnerabilities.
 
-Please send us an email at info@pygpt.net with the following information:
+Please send us an email at noctural.coded@gmail.com with the following information:
 
 - A clear description of the issue you have identified.
 - Any steps to reproduce the issue or a proof-of-concept (if possible).

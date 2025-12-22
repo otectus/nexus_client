@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.07 05:00:00                  #
 # ================================================== #
 
@@ -317,7 +317,6 @@ class Response:
         self.window.controller.chat.log(f"Output ERROR: {msg}")  # log
         self.window.controller.chat.handle_error(msg)
         self.window.controller.chat.common.unlock_input()  # unlock input
-        print(f"Error in sending text: {msg}")
         self.window.dispatch(KernelEvent(KernelEvent.STATE_ERROR, {
             "id": "chat",
         }))

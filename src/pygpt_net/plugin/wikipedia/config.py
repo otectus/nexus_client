@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.08.27 20:18:26                  #
 # ================================================== #
 
@@ -50,7 +50,7 @@ class Config(BaseConfig):
         plugin.add_option(
             "user_agent",
             type="text",
-            value="pygpt-net-wikipedia-plugin/1.0 (+https://pygpt.net)",
+            value="pygpt-net-wikipedia-plugin/1.0 (+https://github.com/otectus/nexus_client)",
             label="User-Agent",
             description="Custom User-Agent for requests.",
         )

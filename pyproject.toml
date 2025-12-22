@@ -2,12 +2,12 @@
 name = "pygpt-net"
 version = "2.6.65"
 description = "Desktop AI Assistant powered by: OpenAI GPT-5, GPT-4, o1, o3, Gemini, Claude, Grok, DeepSeek, and other models supported by Llama Index, and Ollama. Chatbot, agents, completion, image generation, vision analysis, speech-to-text, plugins, MCP, internet access, file handling, command execution and more."
-authors = ["Marcin Szczyglinski <info@pygpt.net>"]
+authors = ["Otectus <noctural.coded@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://pygpt.net"
-repository = "https://github.com/szczyglis-dev/py-gpt"
-documentation = "https://pygpt.readthedocs.io/"
+homepage = "https://github.com/otectus/nexus_client"
+repository = "https://github.com/otectus/nexus_client"
+documentation = "https://github.com/otectus/nexus_client/"
 keywords = ["ai", "api", "api key", "app", "assistant", "bielik", "chat", "chatbot", "chatgpt", "claude", "dall-e", "deepseek", "desktop", "gemini", "gpt", "gpt-3.5", "gpt-4", "gpt-4-vision", "gpt-4o", "gpt-5", "gpt-oss", "gpt3.5", "gpt4", "grok", "langchain", "llama-index", "llama3", "mistral", "o1", "o3", "ollama", "openai", "presets", "py-gpt", "py_gpt", "pygpt", "pyside", "qt", "text completion", "tts", "ui", "vision", "whisper"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
@@ -25,8 +25,8 @@ include = [
 ]
 
 [tool.poetry.urls]
-Changelog = "https://github.com/szczyglis-dev/py-gpt/blob/master/CHANGELOG.md"
-Issues = "https://github.com/szczyglis-dev/py-gpt/issues"
+Changelog = "https://github.com/otectus/nexus_client/blob/master/CHANGELOG.md"
+Issues = "https://github.com/otectus/nexus_client/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.14"
@@ -42,6 +42,7 @@ EbookLib = "^0.18"
 gkeepapi = "0.15.1"
 google-api-python-client = "2.182.0"
 google-generativeai = "0.8.5"
+graphiti-core = "^0.20.4"
 grpcio = "1.75.0"
 httpx = "0.28.1"
 httpx-socks = "^0.10.1"

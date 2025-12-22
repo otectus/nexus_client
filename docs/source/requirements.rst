@@ -6,7 +6,7 @@ Binaries
 
 You can download compiled binary versions for ``Linux`` and ``Windows`` (10/11). 
 
-**PyGPT** binaries require a PC with Windows 10, 11, or Linux. Simply download the installer or the archive with the appropriate version from the download page at https://pygpt.net, extract it, or install it, and then run the application. A binary version for Mac is not available, so you must run PyGPT from PyPi or from the source code on Mac. Currently, only 64-bit binaries are available.
+**Nexus** binaries require a PC with Windows 10, 11, or Linux. Simply download the installer or the archive with the appropriate version from the download page at https://otecta.discourse.group/ extract it, or install it, and then run the application. A binary version for Mac is not available, so you must run Nexus from PyPi or from the source code on Mac. Currently, only 64-bit binaries are available.
 
 Windows 10 and 11
 `````````````````
@@ -19,64 +19,64 @@ Linux
 `````
 The application is available for 64-bit Linux in the form of an archive with
 all required dependencies. Just download the archive from the download page and
-extract it. Then run the application by running the ``pygpt`` binary file in the
+extract it. Then run the application by running the ``nexus`` binary file in the
 root directory.
 
 Linux version requires ``GLIBC`` >= ``2.35``.
 
 Snap Store
 -----------
-You can install **PyGPT** directly from Snap Store:
+You can install **Nexus** directly from Snap Store:
 
 .. code-block:: console
 
-    $ sudo snap install pygpt
+    $ sudo snap install nexus
 
 
 To manage future updates just use:
 
 .. code-block:: console
 
-    $ sudo snap refresh pygpt
+    $ sudo snap refresh nexus
 
 
 **Using camera:** to use camera in Snap version you must connect the camera with interface:
 
 .. code-block:: console
 
-    $ snap connect pygpt:camera
+    $ snap connect nexus:camera
 
 
 **Using microphone:** to use microphone in Snap version you must connect the microphone with:
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:audio-record :audio-record
-    $ sudo snap connect pygpt:alsa
+    $ sudo snap connect nexus:audio-record :audio-record
+    $ sudo snap connect nexus:alsa
 
 **Using audio output:** to use audio output in Snap version you must connect the audio with:
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:audio-playback
-    $ sudo snap connect pygpt:alsa
+    $ sudo snap connect nexus:audio-playback
+    $ sudo snap connect nexus:alsa
 
 
 **Connecting IPython in Docker in Snap version**:
 
-To use IPython in the Snap version, you must connect PyGPT to the Docker daemon:
+To use IPython in the Snap version, you must connect Nexus to the Docker daemon:
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:docker-executables docker:docker-executables
+    $ sudo snap connect nexus:docker-executables docker:docker-executables
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:docker docker:docker-daemon
+    $ sudo snap connect nexus:docker docker:docker-daemon
 
 
 
-**Snap Store:** https://snapcraft.io/pygpt
+**Snap Store:** https://otecta.discourse.group/
 
 Python version
 ---------------
@@ -98,13 +98,13 @@ PyPi (pip)
 
 .. code-block:: console
 
-    $ pip install pygpt-net
+    $ pip install nexus-client
 
 3. Once installed run the command to start the application:
 
 .. code-block:: console
 
-    $ pygpt
+    $ nexus
 
 
 Running from source code
@@ -117,8 +117,8 @@ Install with pip
 
 .. code-block:: console
 
-    $ git clone https://github.com/szczyglis-dev/py-gpt.git
-    $ cd py-gpt
+    $ git clone https://github.com/otectus/nexus_client.git
+    $ cd nexus_client
 
 2. Create a new virtual environment:
 
@@ -147,8 +147,8 @@ Install with Poetry
 
 .. code-block:: console
 
-    $ git clone https://github.com/szczyglis-dev/py-gpt.git
-    $ cd py-gpt
+    $ git clone https://github.com/otectus/nexus_client.git
+    $ cd nexus_client
 
 2. Install Poetry (if not installed):
 
@@ -220,7 +220,7 @@ To use camera in Vision mode in Snap version you must connect the camera with:
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:camera
+    $ sudo snap connect nexus:camera
 
 **Access to microphone in Snap version:**
 
@@ -228,13 +228,13 @@ To use microphone in Snap version you must connect the microphone with:
 
 .. code-block:: console
 
-    $ sudo snap connect pygpt:audio-record :audio-record
+    $ sudo snap connect nexus:audio-record :audio-record
 
 **Snap and AppArmor permission denied**
 
-Snap installs AppArmor profiles for each application by default. The profile for PyGPT is created at:
+Snap installs AppArmor profiles for each application by default. The profile for Nexus is created at:
 
-``/var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt``
+``/var/lib/snapd/apparmor/profiles/snap.nexus.nexus``
 
 The application should work with the default profile; however, if you encounter errors like:
 
@@ -246,7 +246,7 @@ add the appropriate access rules to the profile file, for example:
 
 .. code-block:: console
 
-    # /var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt
+    # /var/lib/snapd/apparmor/profiles/snap.nexus.nexus
 
     ...
 
@@ -258,11 +258,11 @@ Alternatively, you can try removing snap and reinstalling it:
 
 .. code-block:: console
 
-    $ sudo snap remove --purge pygpt
+    $ sudo snap remove --purge nexus
 
 .. code-block:: console
 
-    $ sudo snap install pygpt
+    $ sudo snap install nexus
 
 
 **Problems with GLIBC on Linux**
@@ -286,7 +286,7 @@ On Windows, the proper functioning requires the installation of the ``VC++ Redis
 
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 
-The libraries from this environment are used by ``PySide6`` - one of the base packages used by PyGPT. 
+The libraries from this environment are used by ``PySide6`` - one of the base packages used by Nexus. 
 The absence of the installed libraries may cause display errors or completely prevent the application from running.
 
 It may also be necessary to add the path ``C:\path\to\venv\Lib\python3.x\site-packages\PySide6`` to the ``PATH`` variable.

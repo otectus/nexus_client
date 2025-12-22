@@ -1,12 +1,12 @@
-Extending PyGPT
+Extending Nexus
 ===============
 
 Quick start
 ------------
 
-You can create your own extension for **PyGPT** at any time. 
+You can create your own extension for **Nexus** at any time. 
 
-PyGPT can be extended with:
+Nexus can be extended with:
 
 * custom models
 * custom plugins
@@ -31,13 +31,13 @@ See the ``examples`` directory in this repository with examples of custom launch
 * ``examples/example_vector_store.py``
 * ``examples/example_web_search.py``
 
-These example files can be used as a starting point for creating your own extensions for **PyGPT**.
+These example files can be used as a starting point for creating your own extensions for **Nexus**.
 
-Extending PyGPT with custom plugins, LLMs wrappers and vector stores:
+Extending Nexus with custom plugins, LLMs wrappers and vector stores:
 
 - You can pass custom plugin instances, LLMs wrappers and vector store providers to the launcher.
 
-- This is useful if you want to extend PyGPT with your own plugins, vectors storage and LLMs.
+- This is useful if you want to extend Nexus with your own plugins, vectors storage and LLMs.
 
 To register custom plugins:
 
@@ -135,7 +135,7 @@ Adding a custom plugin
 
 Creating Your Own Plugin
 ````````````````````````
-You can create your own plugin for **PyGPT**. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the ``plugin`` directory - you can use them as coding examples for your own plugins.
+You can create your own plugin for **Nexus**. The plugin can be written in Python and then registered with the application just before launching it. All plugins included with the app are stored in the ``plugin`` directory - you can use them as coding examples for your own plugins.
 
 **Examples (tutorial files)** 
 
@@ -143,7 +143,7 @@ See the example plugin in this ``examples`` directory:
 
 - ``examples/example_plugin.py``
 
-These example file can be used as a starting point for creating your own plugin for **PyGPT**.
+These example file can be used as a starting point for creating your own plugin for **Nexus**.
 
 To register a custom plugin:
 
@@ -157,7 +157,7 @@ To register a custom plugin:
 
    # custom_launcher.py
 
-   from pygpt_net.app import run
+   from nexus_net.app import run
    from plugins import CustomPlugin, OtherCustomPlugin
    from llms import CustomLLM
    from vector_stores import CustomVectorStore
@@ -189,7 +189,7 @@ To do this, create a method named ``handle(self, event, *args, **kwargs)`` and h
 
    # custom_plugin.py
 
-   from pygpt_net.core.events import Event
+   from nexus_net.core.events import Event
    
 
    def handle(self, event: Event, *args, **kwargs):
@@ -212,7 +212,7 @@ To do this, create a method named ``handle(self, event, *args, **kwargs)`` and h
 List of Events
 ```````````````
 
-Event names are defined in ``Event`` class in ``pygpt_net.core.events``.
+Event names are defined in ``Event`` class in ``nexus_net.core.events``.
 
 Syntax: ``event name`` - triggered on, ``event data`` *(data type)*:
 
@@ -310,7 +310,7 @@ Events flow can be debugged by enabling the option ``Config -> Settings -> Devel
 Adding a custom LLM provider
 ----------------------------
 
-Handling LLMs with LlamaIndex is implemented through separated wrappers. This allows for the addition of support for any provider and model available via LlamaIndex. All built-in wrappers for the models and its providers  are placed in the ``pygpt_net.provider.llms``.
+Handling LLMs with LlamaIndex is implemented through separated wrappers. This allows for the addition of support for any provider and model available via LlamaIndex. All built-in wrappers for the models and its providers  are placed in the ``nexus_net.provider.llms``.
 
 These wrappers are loaded into the application during startup using ``launcher.add_llm()`` method:
 
@@ -318,12 +318,12 @@ These wrappers are loaded into the application during startup using ``launcher.a
 
     # app.py
 
-    from pygpt_net.provider.api.openai import OpenAILLM
-    from pygpt_net.provider.llms.azure_openai import AzureOpenAILLM
-    from pygpt_net.provider.llms.anthropic import AnthropicLLM
-    from pygpt_net.provider.llms.hugging_face import HuggingFaceLLM
-    from pygpt_net.provider.llms.ollama import OllamaLLM
-    from pygpt_net.provider.llms.google import GoogleLLM
+    from nexus_net.provider.api.openai import OpenAILLM
+    from nexus_net.provider.llms.azure_openai import AzureOpenAILLM
+    from nexus_net.provider.llms.anthropic import AnthropicLLM
+    from nexus_net.provider.llms.hugging_face import HuggingFaceLLM
+    from nexus_net.provider.llms.ollama import OllamaLLM
+    from nexus_net.provider.llms.google import GoogleLLM
 
     def run(**kwargs):
         """Runs the app."""
@@ -347,7 +347,7 @@ These wrappers are loaded into the application during startup using ``launcher.a
 
 To add support for providers not included by default, you can create your own wrapper that returns a custom model to the application and then pass this custom wrapper to the launcher.
 
-Extending PyGPT with custom plugins and LLM wrappers is straightforward:
+Extending Nexus with custom plugins and LLM wrappers is straightforward:
 
 - Pass instances of custom plugins and LLM wrappers directly to the launcher.
 
@@ -361,7 +361,7 @@ To register custom LLM wrappers:
 
     # custom_launcher.py
 
-    from pygpt_net.app import run
+    from nexus_net.app import run
     from plugins import CustomPlugin, OtherCustomPlugin
     from llms import CustomLLM
 
@@ -393,9 +393,9 @@ See the ``examples`` directory in this repository with examples of custom launch
 * ``examples/example_vector_store.py``
 * ``examples/example_web_search.py``
 
-These example files can be used as a starting point for creating your own extensions for **PyGPT**.
+These example files can be used as a starting point for creating your own extensions for **Nexus**.
 
-To integrate your own model or provider into **PyGPT**, you can also reference the classes located in the ``pygpt_net.provider.llms``. These samples can act as an more complex example for your custom class. Ensure that your custom wrapper class includes two essential methods: ``chat`` and ``completion``. These methods should return the respective objects required for the model to operate in ``chat`` and ``completion`` modes.
+To integrate your own model or provider into **Nexus**, you can also reference the classes located in the ``nexus_net.provider.llms``. These samples can act as an more complex example for your custom class. Ensure that your custom wrapper class includes two essential methods: ``chat`` and ``completion``. These methods should return the respective objects required for the model to operate in ``chat`` and ``completion`` modes.
 
 Every single LLM provider (wrapper) inherits from ``BaseLLM`` class and can provide 2 components: provider for LlamaIndex, and provider for Embeddings.
 
@@ -409,11 +409,11 @@ You can create a custom vector store provider or data loader for your data and d
     # app.py
 
     # vector stores
-    from pygpt_net.provider.vector_stores.chroma import ChromaProvider
-    from pygpt_net.provider.vector_stores.elasticsearch import ElasticsearchProvider
-    from pygpt_net.provider.vector_stores.pinecode import PinecodeProvider
-    from pygpt_net.provider.vector_stores.redis import RedisProvider
-    from pygpt_net.provider.vector_stores.simple import SimpleProvider
+    from nexus_net.provider.vector_stores.chroma import ChromaProvider
+    from nexus_net.provider.vector_stores.elasticsearch import ElasticsearchProvider
+    from nexus_net.provider.vector_stores.pinecode import PinecodeProvider
+    from nexus_net.provider.vector_stores.redis import RedisProvider
+    from nexus_net.provider.vector_stores.simple import SimpleProvider
 
     def run(**kwargs):
         # ...
@@ -438,7 +438,7 @@ To register your custom vector store provider just register it by passing provid
 
     # custom_launcher.py
 
-    from pygpt_net.app import run
+    from nexus_net.app import run
     from plugins import CustomPlugin, OtherCustomPlugin
     from llms import CustomLLM
     from vector_stores import CustomVectorStore
@@ -461,8 +461,8 @@ To register your custom vector store provider just register it by passing provid
     )
 
 
-The vector store provider must be an instance of ``pygpt_net.provider.vector_stores.base.BaseStore``. 
-You can review the code of the built-in providers in ``pygpt_net.provider.vector_stores`` and use them as examples when creating a custom provider.
+The vector store provider must be an instance of ``nexus_net.provider.vector_stores.base.BaseStore``. 
+You can review the code of the built-in providers in ``nexus_net.provider.vector_stores`` and use them as examples when creating a custom provider.
 
 
 Adding a custom data loader
@@ -473,7 +473,7 @@ Adding a custom data loader
 
     # custom_launcher.py
 
-    from pygpt_net.app import run
+    from nexus_net.app import run
     from plugins import CustomPlugin, OtherCustomPlugin
     from llms import CustomLLM
     from vector_stores import CustomVectorStore
@@ -501,5 +501,5 @@ Adding a custom data loader
     )
 
 
-The data loader must be an instance of ``pygpt_net.provider.loaders.base.BaseLoader``. 
-You can review the code of the built-in loaders in ``pygpt_net.provider.loaders`` and use them as examples when creating a custom loader.
+The data loader must be an instance of ``nexus_net.provider.loaders.base.BaseLoader``. 
+You can review the code of the built-in loaders in ``nexus_net.provider.loaders`` and use them as examples when creating a custom loader.

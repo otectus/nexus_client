@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2024.03.26 15:00:00                  #
 # ================================================== #
 
-# PyGPT custom launcher example.
+# Nexus custom launcher example.
 
 # Uncomment these three lines below if you want to run the launcher directly from the source code,
 # without installing the `pygpt_net` package:
@@ -21,7 +21,7 @@
 try:
     from pygpt_net.app import run  # <-- import the "run" function from the app
 except ImportError:
-    msg = ("Please install the PyGPT package to run this example or if you want run it directly uncomment these lines:\n\n"
+    msg = ("Please install the Nexus package to run this example or if you want run it directly uncomment these lines:\n\n"
             "# import sys\n"
             "# from pathlib import Path\n"
             "# sys.path.insert(0, str((Path(__file__).parent / '../src').resolve()))")
@@ -37,7 +37,7 @@ from example_web_search import ExampleWebSearchEngine
 from example_tool import ExampleTool
 
 """
-PyGPT can be extended with:
+Nexus can be extended with:
 
     - Custom plugins
     - Custom LLMs wrappers
@@ -49,7 +49,7 @@ PyGPT can be extended with:
     - Custom tools
 
     - You can pass custom plugin instances, LLMs wrappers, vector store providers and more to the launcher.
-    - This is useful if you want to extend PyGPT with your own plugins, vectors storage, LLMs or other data providers.
+    - This is useful if you want to extend Nexus with your own plugins, vectors storage, LLMs or other data providers.
     
     First, create a custom launcher file, for example, "my_launcher.py," and register your extensions in it.
 

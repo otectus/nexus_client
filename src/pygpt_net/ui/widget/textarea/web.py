@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.16 02:00:00                  #
 # ================================================== #
 from PySide6 import QtCore
@@ -531,7 +531,6 @@ class CustomWebEnginePage(QWebEnginePage):
         return super().acceptNavigationRequest(url, _type, isMainFrame)
 
     def javaScriptConsoleMessage(self, level, message, line_number, source_id):
-        print("[JS CONSOLE] Line", line_number, ":", message)
         self.signals.js_message.emit(line_number, message, source_id)  # handled in debug controller
 
     def cleanup(self):

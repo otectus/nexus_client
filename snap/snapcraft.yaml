@@ -3,7 +3,7 @@ base: core22  # Ubuntu 22.04
 version: '2.6.65'
 summary: Desktop AI Assistant - o1, gpt-4, gpt-4-vision, chat, assistant, vision.
 description: |
-  **PyGPT** is **all-in-one** Desktop AI Assistant that provides direct interaction with OpenAI language models, including GPT-4, GPT-4 Vision, and GPT-3.5, through the OpenAI API. The application also integrates with alternative LLMs.
+  **Nexus** is **all-in-one** Desktop AI Assistant that provides direct interaction with OpenAI language models, including GPT-4, GPT-4 Vision, and GPT-3.5, through the OpenAI API. The application also integrates with alternative LLMs.
 
 grade: stable  # 'stable', 'devel'
 confinement: strict  # 'strict', 'classic', 'devmode'
@@ -15,7 +15,7 @@ architectures:
 
 parts:
   pygpt:
-    #source: https://github.com/szczyglis-dev/py-gpt.git
+    #source: https://github.com/otectus/nexus_client.git
     #source-branch: master
     source: .
     plugin: python

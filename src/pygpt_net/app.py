@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.28 09:00:00                  #
 # ================================================== #
 
@@ -36,11 +36,13 @@ set_env("PYGPT_APP_ENV", "prod", allow_overwrite=True) # dev | prod
 # by default, optimize for low-end devices
 set_env("QTWEBENGINE_CHROMIUM_FLAGS", "--enable-low-end-device-mode", True)
 set_env("QTWEBENGINE_CHROMIUM_FLAGS", "--enable-gpu-rasterization", True)
+set_env("QTWEBENGINE_CHROMIUM_FLAGS", "--log-level=3", True)
+set_env("QTWEBENGINE_CHROMIUM_FLAGS", "--disable-logging", True)
 # set_env("QTWEBENGINE_CHROMIUM_FLAGS", "--ignore-gpu-blocklist", True)
 
 # disable warnings
 set_env("TRANSFORMERS_NO_ADVISORY_WARNINGS", 1)
-set_env("QT_LOGGING_RULES", "qt.multimedia.ffmpeg=false;qt.qpa.fonts=false", allow_overwrite=True)
+set_env("QT_LOGGING_RULES", "qt.multimedia.ffmpeg=false;qt.qpa.fonts=false;qt.webengine*=false;qt.webenginecore*=false", allow_overwrite=True)
 
 if platform.system() == 'Windows':
     set_env("QT_MEDIA_BACKEND", "windows")
@@ -101,6 +103,7 @@ from pygpt_net.plugin.server import Plugin as ServerPlugin
 from pygpt_net.plugin.tuya import Plugin as TuyaPlugin
 from pygpt_net.plugin.wikipedia import Plugin as WikipediaPlugin
 from pygpt_net.plugin.mcp import Plugin as MCPPlugin
+from pygpt_net.plugin.memoryplus import Plugin as MemoryPlusPlugin
 from pygpt_net.plugin.wolfram import Plugin as WolframPlugin
 from pygpt_net.plugin.osm import Plugin as OSMPlugin
 
@@ -212,11 +215,11 @@ from pygpt_net.tools.agent_builder import AgentBuilder as AgentBuilderTool
 
 def run(**kwargs):
     """
-    PyGPT Launcher
+    Nexus Launcher
 
     :param kwargs: Keyword arguments for the launcher.
 
-    PyGPT can be extended with:
+    Nexus can be extended with:
 
     - Custom plugins
     - Custom LLM providers
@@ -229,7 +232,7 @@ def run(**kwargs):
     - Custom agents
 
     You can provide custom plugin instances, LLM wrappers, vector store providers, and more to the launcher.
-    This is useful for extending PyGPT with your own plugins, vector storage, LLMs, or other data providers.
+    This is useful for extending Nexus with your own plugins, vector storage, LLMs, or other data providers.
 
     --- HOW TO REGISTER CUSTOM EXTENSIONS ---
 
@@ -440,6 +443,7 @@ def run(**kwargs):
     launcher.add_plugin(TuyaPlugin())
     launcher.add_plugin(WikipediaPlugin())
     launcher.add_plugin(MCPPlugin())
+    launcher.add_plugin(MemoryPlusPlugin())
     launcher.add_plugin(WolframPlugin())
     launcher.add_plugin(OSMPlugin())
 

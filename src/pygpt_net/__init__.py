@@ -2,30 +2,31 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.28 00:00:00                  #
 # ================================================== #
 
-__author__ = "Marcin Szczygliński"
-__copyright__ = "Copyright 2025, Marcin Szczygliński"
-__credits__ = ["Marcin Szczygliński"]
+__author__ = "Otectus"
+__copyright__ = "Copyright 2025, Otectus"
+__credits__ = ["Otectus"]
 __license__ = "MIT"
 __version__ = "2.6.65"
 __build__ = "2025-09-28"
-__maintainer__ = "Marcin Szczygliński"
-__github__ = "https://github.com/szczyglis-dev/py-gpt"
-__report__ = "https://github.com/szczyglis-dev/py-gpt/issues"
-__website__ = "https://pygpt.net"
-__pypi__ = "https://pypi.org/project/pygpt-net"
-__snap__ = "https://snapcraft.io/pygpt"
-__donate__ = "https://pygpt.net/#donate"
-__documentation__ = "https://pygpt.readthedocs.io"
-__discord__ = "https://pygpt.net/discord"
+__maintainer__ = "Otectus"
+__github__ = "https://github.com/otectus/nexus_client"
+__report__ = "https://github.com/otectus/nexus_client/issues"
+__website__ = "https://otecta.discourse.group/"
+__pypi__ = "https://otecta.discourse.group/"
+__snap__ = "https://otecta.discourse.group/"
+__donate__ = "https://otecta.discourse.group/"
+__documentation__ = "https://otecta.discourse.group/"
+__discord__ = "https://otecta.discourse.group/"
 __ms_store__ = "https://apps.microsoft.com/detail/xp99r4mx3x65vq"
-__email__ = "info@pygpt.net"
-__donate_coffee__ = "https://pygpt.net/donate/buymeacoffee"
-__donate_paypal__ = "https://pygpt.net/donate/paypal"
-__donate_github__ = "https://github.com/sponsors/szczyglis-dev"
+__email__ = "noctural.coded@gmail.com"
+__donate_coffee__ = "https://otecta.discourse.group/"
+__donate_paypal__ = "https://otecta.discourse.group/"
+__donate_github__ = "https://otecta.discourse.group/"
+__update__ = "https://otecta.discourse.group/"

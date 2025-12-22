@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.05 18:00:00                  #
 # ================================================== #
 
@@ -356,7 +356,7 @@ class MainWindow(QMainWindow, QtStyleTools):
         self.core.presets.save_all()
         print("Exiting...")
         print("")
-        print(f"{trans('exit.msg')} https://pygpt.net/#donate")
+        print(f"{trans('exit.msg')} https://github.com/otectus/nexus_client/#donate")
 
     def changeEvent(self, event):
         """

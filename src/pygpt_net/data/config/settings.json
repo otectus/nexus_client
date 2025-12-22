@@ -2127,7 +2127,7 @@
         },
         "label": "settings.llama.idx.storage.args",
         "description": "settings.llama.idx.storage.args.desc",
-        "urls": "https://pygpt.readthedocs.io/en/latest/configuration.html#vector-stores",
+        "urls": "https://github.com/otectus/nexus_client/en/latest/configuration.html#vector-stores",
         "value": [],
         "advanced": false,
         "tab": "store"
@@ -2376,7 +2376,7 @@
                 "use": "var_types"
             }
         },
-        "urls": "https://pygpt.readthedocs.io/en/latest/configuration.html#data-loaders",
+        "urls": "https://github.com/otectus/nexus_client/en/latest/configuration.html#data-loaders",
         "slider": false,
         "label": "settings.llama.hub.loaders.args",
         "description": "settings.llama.hub.loaders.args.desc",
@@ -2860,7 +2860,7 @@
         "slider": false,
         "label": "settings.access.voice_control",
         "urls": {
-            "List of commands": "https://pygpt.readthedocs.io/en/latest/accessibility.html"
+            "List of commands": "https://github.com/otectus/nexus_client/en/latest/accessibility.html"
         },
         "value": false,
         "min": null,

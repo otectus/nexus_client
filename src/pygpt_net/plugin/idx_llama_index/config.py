@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.07.14 00:00:00                  #
 # ================================================== #
 
@@ -75,6 +75,15 @@ class Config(BaseConfig):
             label="Max output tokens for question preparation",
             description="Max tokens in output when preparing question before asking Llama-index",
             min=1,
+            max=None,
+        )
+        plugin.add_option(
+            "prepare_question_max_chars",
+            type="int",
+            value=4000,
+            label="Max input characters for question preparation",
+            description="Max characters from the user input used to prepare the Llama-index question, 0 = no limit",
+            min=0,
             max=None,
         )
         plugin.add_option(

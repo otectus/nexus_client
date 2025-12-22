@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.25 12:00:00                  #
 # ================================================== #
 
@@ -178,6 +178,7 @@ def get_app_meta() -> dict:
         'donate_paypal': get_init_value("__donate_paypal__"),
         'donate_github': get_init_value("__donate_github__"),
         'report': get_init_value("__report__"),
+        'update': get_init_value("__update__"),
     }
 
 

@@ -14,7 +14,7 @@ You can use your own files (for example, to analyze them) during any conversatio
 
    **Important**: When using ``Full context`` mode, the entire content of the file is included in the prompt, which can result in high token usage each time. If you want to reduce the number of tokens used, instead use the ``RAG`` option, which will only query the indexed attachment in the vector database to provide additional context.
 
-**PyGPT** makes it simple for users to upload files and send them to the model for tasks like analysis, similar to attaching files in ``ChatGPT``. There's a separate ``Attachments`` tab next to the text input area specifically for managing file uploads. 
+**Nexus** makes it simple for users to upload files and send them to the model for tasks like analysis, similar to attaching files in ``ChatGPT``. There's a separate ``Attachments`` tab next to the text input area specifically for managing file uploads. 
 
 
 .. tip::
@@ -76,7 +76,7 @@ For example, if the RAG query model is ``gpt-4o-mini``, then the default model f
 Downloading files
 -----------------
 
-**PyGPT** enables the automatic download and saving of files created by the model. This is carried out in the background, with the files being saved to an ``data`` folder located within the user's working directory. To view or manage these files, users can navigate to the ``Files`` tab which features a file browser for this specific directory. Here, users have the interface to handle all files sent by the AI.
+**Nexus** enables the automatic download and saving of files created by the model. This is carried out in the background, with the files being saved to an ``data`` folder located within the user's working directory. To view or manage these files, users can navigate to the ``Files`` tab which features a file browser for this specific directory. Here, users have the interface to handle all files sent by the AI.
 
 This ``data`` directory is also where the application stores files that are generated locally by the AI, such as code files or any other outputs requested from the model. Users have the option to execute code directly from the stored files and read their contents, with the results fed back to the AI. This hands-off process is managed by the built-in plugin system and model-triggered commands. You can also indexing files from this directory (using integrated ``LlamaIndex``) and use it's contents as additional context provided to discussion.
 

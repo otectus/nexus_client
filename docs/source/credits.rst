@@ -5,31 +5,31 @@ Links
 ------
 
 **Official website:**
-https://pygpt.net
+https://otecta.discourse.group/
 
 **Support and donate:** 
-https://pygpt.net/#donate
+https://otecta.discourse.group/
 
 **GitHub:**
-https://github.com/szczyglis-dev/py-gpt
+https://github.com/otectus/nexus_client
 
 **Discord:**
-https://pygpt.net/discord
+https://otecta.discourse.group/
 
 **Snap Store:**
-https://snapcraft.io/pygpt
+https://otecta.discourse.group/
 
 **Microsoft Store:**
 https://apps.microsoft.com/detail/XP99R4MX3X65VQ
 
 **PyPI:**
-https://pypi.org/project/pygpt-net
+https://otecta.discourse.group/
 
 **Author:**
-Marcin Szczygliński (Poland, EU)
+Otectus (Poland, EU)
 
 **Contact:**
-info@pygpt.net
+noctural.coded@gmail.com
 
 **License:**
 MIT License

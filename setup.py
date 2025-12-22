@@ -10,10 +10,10 @@ setup(
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     license='MIT',
-    author="Marcin Szczygliński",
-    author_email='info@pygpt.net',
-    maintainer="Marcin Szczygliński",
-    maintainer_email='info@pygpt.net',
+    author="Otectus",
+    author_email='noctural.coded@gmail.com',
+    maintainer="Otectus",
+    maintainer_email='noctural.coded@gmail.com',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     package_data={'': [
@@ -41,7 +41,7 @@ setup(
         'data/js/highlight/es/*',
         'data/js/highlight/es/languages/*'
     ]},
-    url='https://github.com/szczyglis-dev/py-gpt',
+    url='https://github.com/otectus/nexus_client',
     keywords=['ai', 'api', 'api key', 'app', 'assistant', 'bielik', 'chat', 'chatbot', 'chatgpt', 'claude', 'dall-e', 'deepseek', 'desktop', 'gemini', 'gpt', 'gpt-3.5', 'gpt-4', 'gpt-4-vision', 'gpt-4o', 'gpt-5', 'gpt-oss', 'gpt3.5', 'gpt4', 'grok', 'langchain', 'llama-index', 'llama3', 'mistral', 'o1', 'o3', 'ollama', 'openai', 'presets', 'py-gpt', 'py_gpt', 'pygpt', 'pyside', 'qt', 'text completion', 'tts', 'ui', 'vision', 'whisper'],
     install_requires=[
         'anthropic>=0.54.0,<1.0.0',
@@ -57,6 +57,7 @@ setup(
         'gkeepapi>=0.15.1,<0.16.0',
         'google-api-python-client>=2.179.0,<3.0.0',
         'google-generativeai>=0.8.5,<0.9.0',
+        'graphiti-core>=0.20.4',
         'grpcio>=1.74.0,<2.0.0',
         'httpx>=0.28.1,<0.29.0',
         'httpx-socks>=0.10.1,<0.11.0',

@@ -7,16 +7,16 @@
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
     <ROW Property="ALLUSERS" Value="1" MultiBuildValue="DefaultBuild:"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
-    <ROW Property="ARPCONTACT" Value="info@pygpt.net"/>
-    <ROW Property="ARPHELPLINK" Value="https://pygpt.readthedocs.io"/>
+    <ROW Property="ARPCONTACT" Value="noctural.coded@gmail.com"/>
+    <ROW Property="ARPHELPLINK" Value="https://otecta.discourse.group/"/>
     <ROW Property="ARPPRODUCTICON" Value="icon.exe" Type="8"/>
-    <ROW Property="ARPURLINFOABOUT" Value="https://pygpt.net"/>
-    <ROW Property="ARPURLUPDATEINFO" Value="https://pygpt.readthedocs.io"/>
+    <ROW Property="ARPURLINFOABOUT" Value="https://otecta.discourse.group/"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="https://otecta.discourse.group/"/>
     <ROW Property="IAgree" Value="No" Type="4"/>
-    <ROW Property="Manufacturer" Value="pygpt.net"/>
+    <ROW Property="Manufacturer" Value="Otectus"/>
     <ROW Property="ProductCode" Value="1033:{47CEC126-E59D-4122-ABB6-3A8C72BF0BCF} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="Py-GPT v0.9.2"/>
+    <ROW Property="ProductName" Value="Nexus v0.9.2"/>
     <ROW Property="ProductVersion" Value="0.9.2"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{44CE15C0-8565-4286-B83E-CBA48A4D51F1}"/>
@@ -571,10 +571,10 @@
     <ROW Name="icon.exe" SourcePath="..\icon.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
-    <ROW IniFile="URL" FileName="OFFICI~1.URL|Official website - pygpt.net.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://pygpt.net" Action="0" Component_="APPDIR"/>
-    <ROW IniFile="URL_1" FileName="DOCUME~1.URL|Documentation.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://pygpt.readthedocs.io" Action="0" Component_="APPDIR"/>
-    <ROW IniFile="URL_2" FileName="GITHUB~1.URL|GitHub Project Page.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://github.com/szczyglis-dev/py-gpt" Action="0" Component_="APPDIR"/>
-    <ROW IniFile="WorkingDirectory" FileName="OFFICI~1.URL|Official website - pygpt.net.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="URL" FileName="OFFICI~1.URL|Official website - otecta.discourse.group.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://otecta.discourse.group/" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="URL_1" FileName="DOCUME~1.URL|Documentation.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://otecta.discourse.group/" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="URL_2" FileName="GITHUB~1.URL|GitHub Project Page.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="URL" Value="https://otecta.discourse.group/" Action="0" Component_="APPDIR"/>
+    <ROW IniFile="WorkingDirectory" FileName="OFFICI~1.URL|Official website - otecta.discourse.group.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="APPDIR"/>
     <ROW IniFile="WorkingDirectory_1" FileName="DOCUME~1.URL|Documentation.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="APPDIR"/>
     <ROW IniFile="WorkingDirectory_2" FileName="GITHUB~1.URL|GitHub Project Page.url" DirProperty="SHORTCUTDIR" Section="InternetShortcut" Key="WorkingDirectory" Value="[SHORTCUTDIR]" Action="0" Component_="APPDIR"/>
   </COMPONENT>
@@ -609,8 +609,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="PyGPT" Directory_="SHORTCUTDIR" Name="Py-GPT" Component_="PyGPT.exe" Target="[#PyGPT.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Windows_Dir"/>
-    <ROW Shortcut="PyGPT_1" Directory_="DesktopFolder" Name="Py-GPT" Component_="PyGPT.exe" Target="[#PyGPT.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Windows_Dir"/>
+    <ROW Shortcut="PyGPT" Directory_="SHORTCUTDIR" Name="Nexus" Component_="PyGPT.exe" Target="[#PyGPT.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Windows_Dir"/>
+    <ROW Shortcut="PyGPT_1" Directory_="DesktopFolder" Name="Nexus" Component_="PyGPT.exe" Target="[#PyGPT.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Windows_Dir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>

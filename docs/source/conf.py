@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'PyGPT'
-copyright = '2025, pygpt.net'
-author = 'szczyglis-dev, Marcin Szczygliński'
+project = 'Nexus'
+copyright = '2025, Otectus'
+author = 'Otectus'
 release = '2.6.65'
 
 # -- General configuration ---------------------------------------------------

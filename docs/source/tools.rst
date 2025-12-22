@@ -1,7 +1,7 @@
 Tools
 =====
 
-PyGPT features several useful tools, including:
+Nexus features several useful tools, including:
 
 * Notepad
 * Calendar

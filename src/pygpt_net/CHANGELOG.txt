@@ -2006,7 +2006,7 @@ Tip: To use the `RAG` mode, the file must be indexed in the vector database. Thi
 
 2.1.0 (2024-02-28)
 
-- Upgraded Llama-index from the legacy version 0.9 to the current version 0.10 (note: upgrading PyPi version of PyGPT to 2.1.0 requires reinstallation in a virtual environment to remove old library versions).
+- Upgraded Llama-index from the legacy version 0.9 to the current version 0.10 (note: upgrading PyPi version of Nexus to 2.1.0 requires reinstallation in a virtual environment to remove old library versions).
 - Upgraded Langchain to 0.1.9.
 - Upgraded PyInstaller (and compiled versions) to version 6.
 - Removed LlamaHub and restored support for Python 3.12.
@@ -2385,7 +2385,7 @@ Tip: To use the `RAG` mode, the file must be indexed in the vector database. Thi
 - Fixed broken CSS on Windows
 - Added support for Vector Store databases: "Chroma", "Elasticsearch", "Pinecone" and "Redis" (beta)
 - Added config options for selecting and configuring Vector Store providers
-- Added ability to extend PyGPT with custom Vector Store providers
+- Added ability to extend Nexus with custom Vector Store providers
 - Added commands to the "Vision (inline)" plugin: get camera capture and make screenshot. Options must be enabled in the plugin settings. When enabled, they allow the model to capture images from the camera and make screenshots itself.
 - Added "Query index only (without chat)" option to "Chat with files" mode.
 - Added stream mode support to query index mode in "Chat with files".
@@ -2814,7 +2814,7 @@ Tip: To use the `RAG` mode, the file must be indexed in the vector database. Thi
 
 2.0.43 (2023-12-21)
 
-- PyGPT publicated at Snap Store: https://snapcraft.io/pygpt
+- Nexus publicated at Snap Store: https://github.com/otectus/nexus_client
 - Added link to Snap Store in app menu
 
 2.0.42 (2023-12-20)

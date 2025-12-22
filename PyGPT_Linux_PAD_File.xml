@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PAD>
 <PAD_Version>4.0</PAD_Version>
-<Program_Name>PyGPT - Desktop AI Assistant</Program_Name>
+<Program_Name>Nexus - Desktop AI Assistant</Program_Name>
 <Program_Version>2.6.65</Program_Version>
 <Program_Release_Month>09</Program_Release_Month>
 <Program_Release_Day>28</Program_Release_Day>
 <Program_Release_Year>2025</Program_Release_Year>
 <Program_Cost_Dollars>0</Program_Cost_Dollars>
 <Program_Type>Open Source</Program_Type>
-<Download_URL>https://pygpt.net/download/2.6.65/pygpt-2.6.65.zip</Download_URL>
+<Download_URL>https://otecta.discourse.group/download/2.6.65/nexus-2.6.65.zip</Download_URL>
 <Application_OS_Support>Linux 64 bit</Application_OS_Support>
 <Program_Specific_Category>Generative AI Tools</Program_Specific_Category>
 <Program_Language>English, Deutsch, Francaise, Italian, Espaniol, Ukrainian, Chinese, Polish</Program_Language>
@@ -54,15 +54,15 @@ Features
 - and many more.
 
 The application is free, open-source, and runs on PCs with Windows 10, Windows 11, and Linux. The full Python source code is available on GitHub.
-PyGPT uses the user's API key - to use the application, you must have a registered OpenAI account and your own API key.
+Nexus uses the user's API key - to use the application, you must have a registered OpenAI account and your own API key.
 ]]></Program_Description_Long>
-<Company_Name>Marcin Szczygliński</Company_Name>
-<Company_Website_URL>https://pygpt.net</Company_Website_URL>
-<Support_Email>info@pygpt.net</Support_Email>
-<Author_First_Name>Marcin</Author_First_Name>
-<Author_Last_Name>Szczygliński</Author_Last_Name>
-<Author_Email>info@pygpt.net</Author_Email>
-<Company_Info><![CDATA[Marcin Szczygliński, pygpt.net, https://pygpt.net, https://github.com/szczyglis-dev/py-gpt]]></Company_Info>
-<Application_Icon_URL>https://pygpt.net/icon_small.png</Application_Icon_URL>
-<Application_Screenshot_URL>https://pygpt.net/screenshot_v2.jpg</Application_Screenshot_URL>
+<Company_Name>Otectus</Company_Name>
+<Company_Website_URL>https://otecta.discourse.group/</Company_Website_URL>
+<Support_Email>noctural.coded@gmail.com</Support_Email>
+<Author_First_Name>Otectus</Author_First_Name>
+<Author_Last_Name>Otectus</Author_Last_Name>
+<Author_Email>noctural.coded@gmail.com</Author_Email>
+<Company_Info><![CDATA[Otectus, https://otecta.discourse.group/, https://otecta.discourse.group/]]></Company_Info>
+<Application_Icon_URL>https://otecta.discourse.group/icon_small.png</Application_Icon_URL>
+<Application_Screenshot_URL>https://otecta.discourse.group/screenshot_v2.jpg</Application_Screenshot_URL>
 </PAD>

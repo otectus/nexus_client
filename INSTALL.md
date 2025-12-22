@@ -4,34 +4,34 @@
 
 You can download compiled versions for `Linux` and `Windows` (10/11). 
 
-Download the `.msi` or `tar.gz` for the appropriate OS from the download page at https://pygpt.net and then extract files from the archive and run the application.
+Download the `.msi` or `tar.gz` for the appropriate OS from the download page at https://otecta.discourse.group/ and then extract files from the archive and run the application.
 
 ## Snap Store
 
-You can install **PyGPT** directly from Snap Store:
+You can install **Nexus** directly from Snap Store:
 
 ```commandline
-sudo snap install pygpt
+sudo snap install nexus
 ```
 
 To manage future updates just use:
 
 ```commandline
-sudo snap refresh pygpt
+sudo snap refresh nexus
 ```
 
-[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/pygpt)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://otecta.discourse.group/)
 
 **Using camera:** to use camera in Snap version you must connect the camera with:
 
 ```commandline
-sudo snap connect pygpt:camera
+sudo snap connect nexus:camera
 ```
 
 **Using microphone:** to use microphone in Snap version you must connect the microphone with:
 
 ```commandline
-sudo snap connect pygpt:audio-record :audio-record
+sudo snap connect nexus:audio-record :audio-record
 ```
 
 ## PyPi (pip)
@@ -48,13 +48,13 @@ source venv/bin/activate
 2. Install from PyPi:
 
 ``` commandline
-pip install pygpt-net
+pip install nexus-client
 ```
 
 3. Once installed run the command to start the application:
 
 ``` commandline
-pygpt
+nexus
 ```
 
 ## Source Code
@@ -67,8 +67,8 @@ the Python interpreter (version `3.10` or higher).
 1. Clone git repository or download .zip file:
 
 ```commandline
-git clone https://github.com/szczyglis-dev/py-gpt.git
-cd py-gpt
+git clone https://github.com/otectus/nexus_client.git
+cd nexus_client
 ```
 
 2. Create virtual environment:
@@ -95,8 +95,8 @@ python3 run.py
 1. Clone git repository or download .zip file:
 
 ```commandline
-git clone https://github.com/szczyglis-dev/py-gpt.git
-cd py-gpt
+git clone https://github.com/otectus/nexus_client.git
+cd nexus_client
 ```
 
 2. Install Poetry (if not installed):
@@ -167,14 +167,14 @@ sudo apt install libasound2-plugins
 To use camera in Vision mode in Snap version you must connect the camera with:
 
 ```commandline
-sudo snap connect pygpt:camera
+sudo snap connect nexus:camera
 ```
 
 **Snap and AppArmor permission denied**
 
-Snap installs AppArmor profiles for each application by default. The profile for PyGPT is created at:
+Snap installs AppArmor profiles for each application by default. The profile for Nexus is created at:
 
-`/var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt`
+`/var/lib/snapd/apparmor/profiles/snap.nexus.nexus`
 
 The application should work with the default profile; however, if you encounter errors like:
 
@@ -183,7 +183,7 @@ The application should work with the default profile; however, if you encounter 
 add the appropriate access rules to the profile file, for example:
 
 ```
-# /var/lib/snapd/apparmor/profiles/snap.pygpt.pygpt
+# /var/lib/snapd/apparmor/profiles/snap.nexus.nexus
 
 ...
 
@@ -194,9 +194,9 @@ and reload the profiles.
 
 Alternatively, you can try removing snap and reinstalling it:
 
-`sudo snap remove --purge pygpt`
+`sudo snap remove --purge nexus`
 
-`sudo snap install pygpt`
+`sudo snap install nexus`
 
 
 **Windows and VC++ Redistributable**
@@ -205,7 +205,7 @@ On Windows, the proper functioning requires the installation of the `VC++ Redist
 
 https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist
 
-The libraries from this environment are used by `PySide6` - one of the base packages used by PyGPT. 
+The libraries from this environment are used by `PySide6` - one of the base packages used by Nexus. 
 The absence of the installed libraries may cause display errors or completely prevent the application from running.
 
 It may also be necessary to add the path `C:\path\to\venv\Lib\python3.x\site-packages\PySide6` to the `PATH` variable.

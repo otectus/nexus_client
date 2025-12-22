@@ -8,10 +8,10 @@ Words with the first letter capitalized have specific meanings defined under the
 
 For the purpose of this Privacy Policy:
 
-**"Author"** refers to the creator(s) of PYGPT, also known as "We," "Us," or "Our" in this document.
-**"App"** denotes the PYGPT Application.
+**"Author"** refers to the creator(s) of Nexus, also known as "We," "Us," or "Our" in this document.
+**"App"** denotes the Nexus Application.
 **"You"** represents any individual or entity using the App.
-**"Application"** means the PYGPT software program that You have downloaded.
+**"Application"** means the Nexus software program that You have downloaded.
 
 # Disclaimer
 

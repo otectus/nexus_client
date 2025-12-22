@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.01 23:00:00                  #
 # ================================================== #
 
@@ -289,11 +289,11 @@ class Config:
                 architecture = self.window.core.platforms.get_architecture()
 
                 print("===================================================")
-                print(f" {Color.BOLD}PyGPT    {v}{Color.ENDC} build {build} ({os_name}, {architecture})")
-                print(" Author:  Marcin Szczygliński")
-                print(" GitHub:  https://github.com/szczyglis-dev/py-gpt")
-                print(" Website: https://pygpt.net")
-                print(" Email:   info@pygpt.net")
+                print(f" {Color.BOLD}Nexus    {v}{Color.ENDC} build {build} ({os_name}, {architecture})")
+                print(" Author:  Otectus")
+                print(" GitHub:  https://github.com/otectus/nexus_client")
+                print(" Website: https://otecta.discourse.group/")
+                print(" Email:   noctural.coded@gmail.com")
                 print("===================================================")
                 print("")
                 print(f"{Color.BOLD}Initializing...{Color.ENDC}")

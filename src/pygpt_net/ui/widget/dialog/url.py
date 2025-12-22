@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2024.12.16 01:00:00                  #
 # ================================================== #
 
@@ -100,7 +100,7 @@ class UrlDialog(QDialog):
 
         self.window.ui.nodes["dialog.url.config.help"] = UrlLabel(
             trans("tool.indexer.tab.web.help"),
-            "https://pygpt.readthedocs.io/en/latest/configuration.html#data-loaders")
+            "https://github.com/otectus/nexus_client/en/latest/configuration.html#data-loaders")
 
         params_layout = QVBoxLayout()
         params_layout.setContentsMargins(0, 0, 0, 0)

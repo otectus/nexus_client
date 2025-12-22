@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.08.20 09:00:00                  #
 # ================================================== #
 
@@ -155,6 +155,9 @@ class Plugin(BasePlugin):
 
         tmp_ctx = CtxItem()  # use copy of original context
         tmp_ctx.from_dict(ctx.to_dict())
+        max_len = self.get_option_value("prepare_question_max_chars")
+        if max_len and len(tmp_ctx.input) > max_len:
+            tmp_ctx.input = tmp_ctx.input[:max_len]
 
         bridge_context = BridgeContext(
             ctx=tmp_ctx,
@@ -168,11 +171,19 @@ class Plugin(BasePlugin):
             'context': bridge_context,
             'extra': {},
         })
-        self.window.dispatch(event)
-        response = event.data.get('response')
-        if response is not None and response != "":
-            prepared_question = response
+        try:
+            self.window.dispatch(event)
+            response = event.data.get('response')
+            if response is not None and response != "":
+                prepared_question = response
+        except Exception as e:
+            self._log_idx_error(e)
         return prepared_question
+
+    def _log_idx_error(self, err: Exception):
+        if not self.window:
+            return
+        self.window.core.debug.error(err, console=False)
 
     def get_from_retrieval(self, query: str, idx: str = None) -> str:
         """
@@ -210,15 +221,27 @@ class Plugin(BasePlugin):
             if question == "":
                 return prompt
 
+        max_len = self.get_option_value("max_question_chars")
+        if max_len > 0 and len(question) > max_len:
+            question = question[:max_len]
+
         self.log("Querying Llama-index for: " + question)
 
         # at first, try to get from retrieval
-        response = self.get_from_retrieval(question)
+        try:
+            response = self.get_from_retrieval(question)
+        except Exception as e:
+            self._log_idx_error(e)
+            return prompt
         if response is not None and response != "":
             self.log("Found using retrieval...")
             return prompt + "\nADDITIONAL CONTEXT: " + response
 
-        response, doc_ids, metas = self.query(question)
+        try:
+            response, doc_ids, metas = self.query(question)
+        except Exception as e:
+            self._log_idx_error(e)
+            return prompt
         if response is None or len(response) == 0:
             self.log("No additional context. Aborting.")
             return prompt

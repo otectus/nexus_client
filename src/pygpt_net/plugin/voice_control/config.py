@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2024.11.18 19:00:00                  #
 # ================================================== #
 
@@ -28,8 +28,8 @@ class Config(BaseConfig):
             type="textarea",
             value="Execute voice command",
             label="Magic prefix for voice commands",
-            description="Optional magic prefix required for voice commands, e.g. 'OK PyGPT', 'Execute voice command', etc.",
+            description="Optional magic prefix required for voice commands, e.g. 'OK Nexus', 'Execute voice command', etc.",
             urls={
-                "Help": "https://pygpt.readthedocs.io/en/latest/accessibility.html",
+                "Help": "https://github.com/otectus/nexus_client/en/latest/accessibility.html",
             },
         )

@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.08.20 20:00:00                  #
 # ================================================== #
 
@@ -143,7 +143,7 @@ class UI:
         suffix = self.window.core.platforms.get_env_suffix()
         profile_name = self.window.core.config.profile.get_current_name()
         self.window.setWindowTitle(
-            f"PyGPT - Desktop AI Assistant {self.window.meta['version']} | "
+            f"Nexus - Desktop AI Assistant {self.window.meta['version']} | "
             f"build {self.window.meta['build'].replace('.', '-')}{suffix} ({profile_name})"
         )
 

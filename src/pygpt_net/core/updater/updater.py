@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.09.11 00:00:00                  #
 # ================================================== #
 
@@ -224,7 +224,11 @@ class Updater:
 
         :return: updater url
         """
-        return self.window.meta['website'] + "/api/version?v=" + str(self.window.meta['version'])
+        base = self.window.meta.get('update') or self.window.meta.get('website')
+        if not base:
+            return ""
+        base = base.rstrip("/")
+        return base + "/api/version?v=" + str(self.window.meta['version'])
 
     def get_thanks(self) -> Tuple[str, str, str]:
         """
@@ -233,6 +237,8 @@ class Updater:
         :return: people list
         """
         url = self.get_updater_url()
+        if not url:
+            return self.thanks
         self.thanks = ""
         try:
             ctx = ssl.create_default_context()
@@ -246,8 +252,7 @@ class Updater:
             if "thanks" in data_json:
                 self.thanks = self.parse_thanks(data_json["thanks"])
         except Exception as e:
-            self.window.core.debug.log(e)
-            print("Failed to fetch data")
+            self.window.core.debug.error(e, console=False)
 
         return self.thanks
 
@@ -268,6 +273,8 @@ class Updater:
         :return: (is_new, newest_version, newest_build, changelog, download_windows, download_linux)
         """
         url = self.get_updater_url()
+        if not url:
+            return is_new, newest_version, newest_build, changelog, download_windows, download_linux
         is_new = False
         newest_version = ""
         newest_build = ""
@@ -328,8 +335,7 @@ class Updater:
             self.window.core.config.set("updater.check.bg.last_version", newest_version)
 
         except Exception as e:
-            self.window.core.debug.log(e)
-            print("Failed to check for updates")
+            self.window.core.debug.error(e, console=False)
 
         return is_new, newest_version, newest_build, changelog, download_windows, download_linux
 

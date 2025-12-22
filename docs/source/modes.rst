@@ -6,7 +6,7 @@ Chat
 
 **+ Inline Vision and Image generation**
 
-In **PyGPT**, this mode mirrors ``ChatGPT``, allowing you to chat with models like ``GPT-5``, ``GPT-4``, ``o1``, ``o3``, ``Claude``, ``Gemini``, ``Grok``, ``Perplexity (Sonar)``, ``Deepseek``, and more. It works with the OpenAI SDK using the ``Responses API`` and ``ChatCompletions API``. You can also use SDKs from Google GenAI, Anthropic, or xAI if the native SDK is enabled. You can set the endpoint for ``ChatCompletions`` in ``Config -> Settings -> API Keys``.
+In **Nexus**, this mode mirrors ``ChatGPT``, allowing you to chat with models like ``GPT-5``, ``GPT-4``, ``o1``, ``o3``, ``Claude``, ``Gemini``, ``Grok``, ``Perplexity (Sonar)``, ``Deepseek``, and more. It works with the OpenAI SDK using the ``Responses API`` and ``ChatCompletions API``. You can also use SDKs from Google GenAI, Anthropic, or xAI if the native SDK is enabled. You can set the endpoint for ``ChatCompletions`` in ``Config -> Settings -> API Keys``.
 
 .. note::
    This mode uses the provider SDK directly. If there's no native client built into the app, models like Sonar, or Llama3 are supported in Chat mode via LlamaIndex or OpenAI-compatible API endpoints. The app automatically switches to these endpoints when using non-OpenAI models. You can enable or disable the use of the native API SDK (per provider) in ``Settings -> API Keys``. If the native SDK is disabled, the OpenAI SDK will be used via the compatible ChatCompletions API endpoint.
@@ -184,7 +184,7 @@ Image and video generation
 
 **OpenAI DALL-E 3 / Google Imagen 3 and 4**
 
-**PyGPT** enables quick and easy image creation with image models like ``DALL-E 3``, ``gpt-image-1`` or ``Google Imagen``. 
+**Nexus** enables quick and easy image creation with image models like ``DALL-E 3``, ``gpt-image-1`` or ``Google Imagen``. 
 Generating images is akin to a chat conversation  -  a user's prompt triggers the generation, followed by downloading, saving to the computer, and displaying the image onscreen. You can send raw prompt to the model in ``Image generation`` mode or ask the model for the best prompt.
 
 .. image:: images/v3_img.png
@@ -229,16 +229,16 @@ You also have the options to delete it or view it in full size in your web brows
 The app keeps a history of all your prompts, allowing you to revisit any session and reuse previous 
 prompts for creating new images.
 
-Images are stored in ``img`` directory in PyGPT's user data folder.
+Images are stored in ``img`` directory in Nexus's user data folder.
 
 
 Assistants
 ----------
 This mode uses the OpenAI's **Assistants API**.
 
-This mode expands on the basic chat functionality by including additional external tools like a ``Code Interpreter`` for executing code, ``Retrieval Files`` for accessing files, and custom ``Functions`` for enhanced interaction and integration with other APIs or services. In this mode, you can easily upload and download files. **PyGPT** streamlines file management, enabling you to quickly upload documents and manage files created by the model.
+This mode expands on the basic chat functionality by including additional external tools like a ``Code Interpreter`` for executing code, ``Retrieval Files`` for accessing files, and custom ``Functions`` for enhanced interaction and integration with other APIs or services. In this mode, you can easily upload and download files. **Nexus** streamlines file management, enabling you to quickly upload documents and manage files created by the model.
 
-Setting up new assistants is simple - a single click is all it takes, and they instantly sync with the ``OpenAI API``. Importing assistants you've previously created with OpenAI into **PyGPT** is also a seamless process.
+Setting up new assistants is simple - a single click is all it takes, and they instantly sync with the ``OpenAI API``. Importing assistants you've previously created with OpenAI into **Nexus** is also a seamless process.
 
 .. image:: images/v2_mode_assistant.png
    :width: 800
@@ -292,7 +292,7 @@ In the future, the list of built-in agents will be expanded.
 
 You can create your own types (workflows/patterns) using the built-in visual node-based editor found in the ``Tools -> Agents Builder``.
 
-You can also create your own agent by creating a new provider that inherits from ``pygpt_net.provider.agents.base``.
+You can also create your own agent by creating a new provider that inherits from ``nexus_net.provider.agents.base``.
 
 **Tools and Plugins**
 

@@ -5,9 +5,9 @@ Functions, commands and tools
 
 	Remember to enable the ``+ Tools`` checkbox to enable execution of tools and commands from plugins.
 
-From version ``2.2.20`` PyGPT uses native API function calls by default. You can go back to internal syntax (described below) by switching off option ``Config -> Settings -> Prompts -> Use native API function calls``. You must also enable ``Tool calls`` checkbox in model advanced settings to use native function calls with the specified model.
+From version ``2.2.20`` Nexus uses native API function calls by default. You can go back to internal syntax (described below) by switching off option ``Config -> Settings -> Prompts -> Use native API function calls``. You must also enable ``Tool calls`` checkbox in model advanced settings to use native function calls with the specified model.
 
-In background, **PyGPT** uses an internal syntax to define commands and their parameters, which can then be used by the model and executed on the application side or even directly in the system. This syntax looks as follows (example command below):
+In background, **Nexus** uses an internal syntax to define commands and their parameters, which can then be used by the model and executed on the application side or even directly in the system. This syntax looks as follows (example command below):
 
 .. code-block:: console
 
@@ -30,7 +30,7 @@ https://platform.openai.com/docs/guides/function-calling
 
 https://cookbook.openai.com/examples/how_to_call_functions_with_chat_models
 
-PyGPT offers compatibility of these functions with commands (tools) used in the application. All you need to do is define the appropriate functions using the correct JSON schema, and PyGPT will do the rest, translating such syntax on the fly into its own internal format.
+Nexus offers compatibility of these functions with commands (tools) used in the application. All you need to do is define the appropriate functions using the correct JSON schema, and Nexus will do the rest, translating such syntax on the fly into its own internal format.
 
 Local functions and tools from plugins are available in all modes, except ``Assistants``.
 
@@ -82,7 +82,7 @@ In response you will receive prepared command, like this:
 
 	<tool>{"cmd": "send_email", "params": {"quote": "Why do we tell actors to 'break a leg?' Because every play has a cast!"}}</tool>
 
-After receiving this, PyGPT will execute the system ``echo`` command with params given from ``params`` field and replacing ``{quote}`` placeholder with ``quote`` param value.
+After receiving this, Nexus will execute the system ``echo`` command with params given from ``params`` field and replacing ``{quote}`` placeholder with ``quote`` param value.
 
 As a result, response like this will be sent to the model:
 
@@ -90,4 +90,4 @@ As a result, response like this will be sent to the model:
 
 	[{"request": {"cmd": "send_email"}, "result": "OK. Email sent: Why do we tell actors to 'break a leg?' Because every play has a cast!"}]
 
-With this flow you can use both forms - API provider JSON schema and PyGPT schema - to define and execute commands and functions in the application. They will cooperate with each other and you can use them interchangeably.
+With this flow you can use both forms - API provider JSON schema and Nexus schema - to define and execute commands and functions in the application. They will cooperate with each other and you can use them interchangeably.

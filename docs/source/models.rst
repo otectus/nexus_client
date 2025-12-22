@@ -4,7 +4,7 @@ Models
 Built-in models
 ---------------
 
-PyGPT has a preconfigured list of models (as of 2025-08-31):
+Nexus has a preconfigured list of models (as of 2025-08-31):
 
 - ``bielik-11b-v2.3-instruct:Q4_K_M`` (Ollama)
 - ``chatgpt-4o-latest`` (OpenAI)
@@ -98,7 +98,7 @@ You can import new models by manually editing ``models.json`` or by using the mo
 Adding a custom model
 ---------------------
 
-You can add your own models. See the section ``Extending PyGPT / Adding a new model`` for more info.
+You can add your own models. See the section ``Extending Nexus / Adding a new model`` for more info.
 
 There is built-in support for those LLM providers:
 
@@ -142,7 +142,7 @@ For example, on Linux:
 
     $ ollama run llama3.1
 
-5) Return to PyGPT and select the correct model from models list to chat with selected model using Ollama running locally.
+5) Return to Nexus and select the correct model from models list to chat with selected model using Ollama running locally.
 
 **Example available models:**
 

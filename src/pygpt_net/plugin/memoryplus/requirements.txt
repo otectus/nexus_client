@@ -1,0 +1,3 @@
+graphiti-core>=0.20.4
+nest_asyncio
+pyvis>=0.3.2

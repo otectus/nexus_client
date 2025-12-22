@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # ================================================== #
 # This file is a part of PYGPT package               #
-# Website: https://pygpt.net                         #
-# GitHub:  https://github.com/szczyglis-dev/py-gpt   #
+# Website: https://github.com/otectus/nexus_client                         #
+# GitHub:  https://github.com/otectus/nexus_client   #
 # MIT License                                        #
-# Created By  : Marcin Szczygliński                  #
+# Created By  : Otectus                  #
 # Updated Date: 2025.08.21 07:00:00                  #
 # ================================================== #
 
@@ -120,52 +120,58 @@ class Chat:
         query = ctx.input  # user input
         verbose = self.window.core.config.get("log.llama", False)
 
-        if model is None or not isinstance(model, ModelItem):
-            raise Exception("Model config not provided")
+        try:
+            if model is None or not isinstance(model, ModelItem):
+                raise Exception("Model config not provided")
 
-        self.log("Query index...")
-        self.log(f"Idx: {idx}, query: {query}, model: {model.id}")
+            self.log("Query index...")
+            self.log(f"Idx: {idx}, query: {query}, model: {model.id}")
 
-        index, llm = self.get_index(idx, model, stream=stream)
-        input_tokens = self.window.core.tokens.from_llama_messages(
-            query,
-            [],
-            model.id,
-        )
-        # query index
-        tpl = self.get_custom_prompt(system_prompt)
-        if tpl is not None:
-            self.log(f"Query index with custom prompt: {system_prompt}...")
-            response = index.as_query_engine(
-                llm=llm,
-                streaming=stream,
-                text_qa_template=tpl,
-                verbose=verbose,
-            ).query(query)  # query with custom sys prompt
-        else:
-            response = index.as_query_engine(
-                llm=llm,
-                streaming=stream,
-                verbose=verbose,
-            ).query(query)  # query with default prompt
-
-        if response:
-            if stream:
-                ctx.add_doc_meta(self.get_metadata(response.source_nodes))  # store metadata
-                ctx.stream = response.response_gen
-                ctx.input_tokens = input_tokens
-                ctx.set_output("", "")
+            index, llm = self.get_index(idx, model, stream=stream)
+            input_tokens = self.window.core.tokens.from_llama_messages(
+                query,
+                [],
+                model.id,
+            )
+            # query index
+            tpl = self.get_custom_prompt(system_prompt)
+            if tpl is not None:
+                self.log(f"Query index with custom prompt: {system_prompt}...")
+                response = index.as_query_engine(
+                    llm=llm,
+                    streaming=stream,
+                    text_qa_template=tpl,
+                    verbose=verbose,
+                ).query(query)  # query with custom sys prompt
             else:
-                ctx.add_doc_meta(self.get_metadata(response.source_nodes))  # store metadata
-                ctx.input_tokens = input_tokens
-                ctx.output_tokens = self.window.core.tokens.from_llama_messages(
-                    response.response,
-                    [],
-                    model.id,
-                )  # calc from response
-                ctx.set_output(str(response.response), "")
-            return True
-        return False
+                response = index.as_query_engine(
+                    llm=llm,
+                    streaming=stream,
+                    verbose=verbose,
+                ).query(query)  # query with default prompt
+
+            if response:
+                if stream:
+                    ctx.add_doc_meta(self.get_metadata(response.source_nodes))  # store metadata
+                    ctx.stream = response.response_gen
+                    ctx.input_tokens = input_tokens
+                    ctx.set_output("", "")
+                else:
+                    ctx.add_doc_meta(self.get_metadata(response.source_nodes))  # store metadata
+                    ctx.input_tokens = input_tokens
+                    ctx.output_tokens = self.window.core.tokens.from_llama_messages(
+                        response.response,
+                        [],
+                        model.id,
+                    )  # calc from response
+                    ctx.set_output(str(response.response), "")
+                return True
+            return False
+        except Exception as e:
+            self._log_error(e)
+            if ctx:
+                ctx.set_output("", "")
+            return False
 
     def retrieval(
             self,
@@ -186,28 +192,34 @@ class Chat:
         query = ctx.input  # user input
         verbose = self.window.core.config.get("log.llama", False)
 
-        self.log("Retrieval...")
-        self.log(f"Idx: {idx}, retrieve only: {query}")
+        try:
+            self.log("Retrieval...")
+            self.log(f"Idx: {idx}, retrieve only: {query}")
 
-        index, llm = self.get_index(idx, model, stream=stream)
-        retriever = index.as_retriever()
-        nodes = retriever.retrieve(query)
-        outputs = []
-        self.log(f"Retrieved {len(nodes)} nodes...")
-        for node in nodes:
-            outputs.append({
-                "text": node.text,
-                "score": node.score,
-            })
-        if outputs:
-            response = ""
-            for output in outputs:
-                response += f"**Score: {output['score']}**\n\n{output['text']}"
-                if output != outputs[-1]:
-                    response += "\n\n-------\n\n"
-            ctx.set_output(response)
-            ctx.add_doc_meta(self.get_metadata(nodes))
-        return True
+            index, llm = self.get_index(idx, model, stream=stream)
+            retriever = index.as_retriever()
+            nodes = retriever.retrieve(query)
+            outputs = []
+            self.log(f"Retrieved {len(nodes)} nodes...")
+            for node in nodes:
+                outputs.append({
+                    "text": node.text,
+                    "score": node.score,
+                })
+            if outputs:
+                response = ""
+                for output in outputs:
+                    response += f"**Score: {output['score']}**\n\n{output['text']}"
+                    if output != outputs[-1]:
+                        response += "\n\n-------\n\n"
+                ctx.set_output(response)
+                ctx.add_doc_meta(self.get_metadata(nodes))
+            return True
+        except Exception as e:
+            self._log_error(e)
+            if ctx:
+                ctx.set_output("", "")
+            return False
 
     def chat(
             self,
@@ -844,3 +856,8 @@ class Chat:
         if is_log:
             print(f"[LlamaIndex] {msg}")
         self.window.idx_logger_message.emit(msg)
+
+    def _log_error(self, err: Exception):
+        if not self.window:
+            return
+        self.window.core.debug.error(err, console=False)
