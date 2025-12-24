@@ -1057,9 +1057,9 @@ jupyterlab-pygments==0.3.0 ; python_version >= "3.10" and python_version < "3.14
 kubernetes==33.1.0 ; python_version >= "3.10" and python_version < "3.14" \
     --hash=sha256:544de42b24b64287f7e0aa9513c93cb503f7f40eea39b20f66810011a86eabc5 \
     --hash=sha256:f64d829843a54c251061a8e7a14523b521f2dc5c896cf6d65ccf348648a88993
-langchain-core==0.3.75 ; python_version >= "3.10" and python_version <= "3.12" \
-    --hash=sha256:03ca1fadf955ee3c7d5806a841f4b3a37b816acea5e61a7e6ba1298c05eea7f5 \
-    --hash=sha256:ab0eb95a06ed6043f76162e6086b45037690cb70b7f090bd83b5ebb8a05b70ed
+langchain-core==0.3.81 ; python_version >= "3.10" and python_version <= "3.12" \
+    --hash=sha256:0473e7cffbba06017393f2f1ee116da098c298e4ec478ada91d321f42dff921c \
+    --hash=sha256:d0f34c88254d78ccb1b9a038f860d13dea90186045026fd8fc3e1265eed73a4e
 langchain-text-splitters==0.3.9 ; python_version >= "3.10" and python_version <= "3.12" \
     --hash=sha256:7cd1e5a3aaf609979583eeca2eb34177622570b8fa8f586a605c6b1c34e7ebdb \
     --hash=sha256:cee0bb816211584ea79cc79927317c358543f40404bcfdd69e69ba3ccde54401
