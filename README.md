@@ -3,12 +3,6 @@
 [![Version](https://img.shields.io/badge/version-0.1.0-informational)](#versioning)
 [![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](#requirements)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](#license)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-222?logo=githubactions&logoColor=white)](#ci--quality-gates)
-[![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC?logo=pytest&logoColor=white)](#testing)
-[![Lint](https://img.shields.io/badge/lint-ruff-black?logo=ruff&logoColor=white)](#linting--formatting)
-[![Type Check](https://img.shields.io/badge/types-mypy-blueviolet)](#type-checking)
-[![Code Style](https://img.shields.io/badge/style-black-000000?logo=python&logoColor=white)](#linting--formatting)
-[![Pre-commit](https://img.shields.io/badge/hooks-pre--commit-FAB040?logo=precommit&logoColor=black)](#pre-commit)
 
 A production-grade AI orchestration client that keeps an agent **coherent over time** by enforcing **identity invariants**, managing **long-term memory**, and maintaining a **persistent mood state**, all under strict **token budgets** with **graceful degradation**.
 
