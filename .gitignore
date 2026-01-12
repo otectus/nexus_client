@@ -1,0 +1,15 @@
+# Nexus Gitignore
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# Local Work Directory (Contains Secrets/Logs)
+workdirectory/
+config.json
+*.sqlite
+*.db
+
+# IDEs
+.vscode/
+.idea/
